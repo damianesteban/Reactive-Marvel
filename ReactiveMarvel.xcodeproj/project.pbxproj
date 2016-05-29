@@ -24,6 +24,7 @@
 		FB8825DC1CF7D70200903711 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB8825DA1CF7D70200903711 /* BaseViewController.xib */; };
 		FBEFE5361CFB73AB0010C271 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE5341CFB73AB0010C271 /* SignUpViewController.swift */; };
 		FBEFE5371CFB73AB0010C271 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */; };
+		FBEFE5391CFB7C5B0010C271 /* SignupValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE5381CFB7C5B0010C271 /* SignupValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		FB8825DA1CF7D70200903711 /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
 		FBEFE5341CFB73AB0010C271 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		FBEFE5381CFB7C5B0010C271 /* SignupValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				FB8825D31CF7CE4800903711 /* JSONable.swift */,
+				FBEFE5381CFB7C5B0010C271 /* SignupValidator.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				FB8825B51CF7C9F900903711 /* AppDelegate.swift in Sources */,
 				FB6AA19A1CFA231A007434E9 /* ActivityIndicator.swift in Sources */,
 				FB8825D71CF7D01800903711 /* MarvelService.swift in Sources */,
+				FBEFE5391CFB7C5B0010C271 /* SignupValidator.swift in Sources */,
 				FBEFE5361CFB73AB0010C271 /* SignUpViewController.swift in Sources */,
 				FB8825D41CF7CE4800903711 /* JSONable.swift in Sources */,
 				FB3ACFC11CF8BFE700A32A4C /* SuperTableViewCell.swift in Sources */,

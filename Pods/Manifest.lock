@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (3.4.0)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - CryptoSwift (0.4.1)
   - HanekeSwift (0.10.1)
   - Moya/Core (6.4.0):
@@ -15,6 +18,7 @@ PODS:
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - ChameleonFramework/Swift
   - CryptoSwift
   - HanekeSwift
   - Moya/RxSwift
@@ -23,6 +27,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CryptoSwift: 25b5aff3f260967391f8fff2e9abe4254d2c6fd5
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   Moya: 4d526954c8afd79820991393d40d7d8af756ceee
@@ -31,6 +36,6 @@ SPEC CHECKSUMS:
   RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 8d65a3ed9b3efc4f6c59cb6cb2e1fe8335a6a519
+PODFILE CHECKSUM: 1fcc281da22f244ab4c1c7fba3f745c36ed14b1b
 
 COCOAPODS: 1.0.0
