@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseViewController" customModule="ReactiveMarvel" customModuleProvider="target">
+            <connections>
+                <outlet property="networkActivityIndicator" destination="Ihi-mn-kiq" id="0V5-RV-XoO"/>
+                <outlet property="searchTextField" destination="UII-XY-tGw" id="Ahf-mt-0qE"/>
+                <outlet property="tableView" destination="gcl-CZ-jGa" id="O4Z-X2-LFa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfk-kh-YBZ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                    <items>
+                        <navigationItem title="Search" prompt="Reactive Marvel" id="IDd-jh-7r5"/>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gcl-CZ-jGa">
+                    <rect key="frame" x="0.0" y="118" width="320" height="450"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="UII-XY-tGw">
+                    <rect key="frame" x="0.0" y="74" width="320" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ihi-mn-kiq">
+                    <rect key="frame" x="142" y="77" width="37" height="37"/>
+                    <color key="color" red="0.051960200069999997" green="0.19789251690000001" blue="0.56280845400000001" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="UII-XY-tGw" firstAttribute="top" secondItem="Bfk-kh-YBZ" secondAttribute="bottom" id="68X-XU-wUa"/>
+                <constraint firstItem="Bfk-kh-YBZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7iu-LR-oq6"/>
+                <constraint firstAttribute="trailing" secondItem="Bfk-kh-YBZ" secondAttribute="trailing" id="AoJ-B2-FSM"/>
+                <constraint firstAttribute="bottom" secondItem="gcl-CZ-jGa" secondAttribute="bottom" id="G2x-UK-QMk"/>
+                <constraint firstItem="gcl-CZ-jGa" firstAttribute="top" secondItem="UII-XY-tGw" secondAttribute="bottom" id="LK0-wX-9sU"/>
+                <constraint firstItem="UII-XY-tGw" firstAttribute="centerX" secondItem="Ihi-mn-kiq" secondAttribute="centerX" id="WSl-UY-ThI"/>
+                <constraint firstItem="Bfk-kh-YBZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bO7-bk-8gf"/>
+                <constraint firstItem="UII-XY-tGw" firstAttribute="leading" secondItem="gcl-CZ-jGa" secondAttribute="leading" id="cIE-1b-fSy"/>
+                <constraint firstItem="UII-XY-tGw" firstAttribute="centerY" secondItem="Ihi-mn-kiq" secondAttribute="centerY" id="eGf-Ph-qIJ"/>
+                <constraint firstItem="Bfk-kh-YBZ" firstAttribute="trailing" secondItem="UII-XY-tGw" secondAttribute="trailing" id="fs6-Hj-2ny"/>
+                <constraint firstItem="UII-XY-tGw" firstAttribute="trailing" secondItem="gcl-CZ-jGa" secondAttribute="trailing" id="hUF-IQ-6Ka"/>
+                <constraint firstItem="Bfk-kh-YBZ" firstAttribute="leading" secondItem="UII-XY-tGw" secondAttribute="leading" id="sze-Ne-0sI"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="-19" y="290"/>
+        </view>
+    </objects>
+</document>

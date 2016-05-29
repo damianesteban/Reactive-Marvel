@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (3.4.0)
+  - CryptoSwift (0.4.1)
+  - HanekeSwift (0.10.1)
+  - Moya/Core (6.4.0):
+    - Alamofire (~> 3.0)
+    - Result (~> 2.0)
+  - Moya/RxSwift (6.4.0):
+    - Moya/Core
+    - RxSwift (~> 2.0)
+  - Result (2.0.0)
+  - RxCocoa (2.5.0):
+    - RxSwift (~> 2.5)
+  - RxSwift (2.5.0)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - CryptoSwift
+  - HanekeSwift
+  - Moya/RxSwift
+  - RxCocoa
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  CryptoSwift: 25b5aff3f260967391f8fff2e9abe4254d2c6fd5
+  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  Moya: 4d526954c8afd79820991393d40d7d8af756ceee
+  Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
+  RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: 8d65a3ed9b3efc4f6c59cb6cb2e1fe8335a6a519
+
+COCOAPODS: 1.0.0

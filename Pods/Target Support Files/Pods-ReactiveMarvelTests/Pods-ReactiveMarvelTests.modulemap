@@ -1,0 +1,6 @@
+framework module Pods_ReactiveMarvelTests {
+  umbrella header "Pods-ReactiveMarvelTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
