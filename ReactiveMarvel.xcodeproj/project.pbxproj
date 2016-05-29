@@ -22,6 +22,8 @@
 		FB8825D71CF7D01800903711 /* MarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8825D61CF7D01800903711 /* MarvelService.swift */; };
 		FB8825DB1CF7D70200903711 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8825D91CF7D70200903711 /* BaseViewController.swift */; };
 		FB8825DC1CF7D70200903711 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB8825DA1CF7D70200903711 /* BaseViewController.xib */; };
+		FBEFE5361CFB73AB0010C271 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE5341CFB73AB0010C271 /* SignUpViewController.swift */; };
+		FBEFE5371CFB73AB0010C271 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		FB8825D61CF7D01800903711 /* MarvelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelService.swift; sourceTree = "<group>"; };
 		FB8825D91CF7D70200903711 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FB8825DA1CF7D70200903711 /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		FBEFE5341CFB73AB0010C271 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 			children = (
 				FB8825D91CF7D70200903711 /* BaseViewController.swift */,
 				FB8825DA1CF7D70200903711 /* BaseViewController.xib */,
+				FBEFE5341CFB73AB0010C271 /* SignUpViewController.swift */,
+				FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBEFE5371CFB73AB0010C271 /* SignUpViewController.xib in Resources */,
 				FB8825DC1CF7D70200903711 /* BaseViewController.xib in Resources */,
 				FB3ACFC21CF8BFE700A32A4C /* SuperTableViewCell.xib in Resources */,
 				FB8825B71CF7C9F900903711 /* Assets.xcassets in Resources */,
@@ -404,6 +411,7 @@
 				FB8825B51CF7C9F900903711 /* AppDelegate.swift in Sources */,
 				FB6AA19A1CFA231A007434E9 /* ActivityIndicator.swift in Sources */,
 				FB8825D71CF7D01800903711 /* MarvelService.swift in Sources */,
+				FBEFE5361CFB73AB0010C271 /* SignUpViewController.swift in Sources */,
 				FB8825D41CF7CE4800903711 /* JSONable.swift in Sources */,
 				FB3ACFC11CF8BFE700A32A4C /* SuperTableViewCell.swift in Sources */,
 			);

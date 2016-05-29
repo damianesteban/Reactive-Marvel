@@ -18,14 +18,14 @@ class BaseViewController: UIViewController {
     @IBOutlet weak var searchTextField: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var networkActivityIndicator: UIActivityIndicatorView!
-    
     let disposeBag = DisposeBag()
     var superQueryViewModel: SuperQueryViewModel!
     let cellIdentifier = String(SuperTableViewCell)
     
     let activityIndicator = ActivityIndicator()
     
+    // We use latestQuery to initialize SuperQueryViewModel.  When the user begins typing in
+    // the UISearchBar this kicks off our network request.
     var latestQuery: Observable<String> {
         return searchTextField
             .rx_text
@@ -64,9 +64,9 @@ class BaseViewController: UIViewController {
         
         // Displays an activity indicator in the middle of the search bar.
         // TODO: Refactor to use PKHUD (or similar).
-        superQueryViewModel.activityIndicator
-            .drive(networkActivityIndicator.rx_animating)
-            .addDisposableTo(disposeBag)
+        //superQueryViewModel.activityIndicator
+            //.drive(networkActivityIndicator.rx_animating)
+            //.addDisposableTo(disposeBag)
         
         // Displays network activity indicator in upper right hand corner
         // TODO: Use full size activity indicator / HUD

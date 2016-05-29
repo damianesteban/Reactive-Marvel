@@ -17,8 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // Override point for customization after application launch.
-        let baseViewController = BaseViewController()
-        self.window!.rootViewController = baseViewController
+        let signupViewController = SignUpViewController()
+        // let baseViewController = BaseViewController()
+        //let navigationController = UINavigationController(rootViewController: baseViewController)
+        self.window!.rootViewController = signupViewController
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
         return true
