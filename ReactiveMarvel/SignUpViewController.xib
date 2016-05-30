@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="emailAddressTextField" destination="ipz-AC-9Xh" id="c4l-DH-dP0"/>
                 <outlet property="passwordTextField" destination="6dp-ID-3YR" id="qM1-gb-c2X"/>
+                <outlet property="submitSignupButton" destination="rDx-IM-ykx" id="tCY-ut-Pyx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,15 +18,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDx-IM-ykx">
-                    <rect key="frame" x="142" y="450" width="59" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="59" id="p83-k6-U6l"/>
-                        <constraint firstAttribute="height" constant="30" id="u4R-dy-vjR"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Sign Up"/>
-                </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="UkU-YI-Zh0">
                     <rect key="frame" x="2" y="192" width="316" height="117"/>
                     <subviews>
@@ -35,25 +27,38 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="email address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipz-AC-9Xh">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipz-AC-9Xh">
                             <rect key="frame" x="0.0" y="39" width="316" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dp-ID-3YR">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dp-ID-3YR">
                             <rect key="frame" x="0.0" y="87" width="316" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDx-IM-ykx">
+                    <rect key="frame" x="131" y="317" width="59" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="iJV-Tk-15u"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <state key="normal" title="Sign Up">
+                        <color key="titleColor" red="0.20392157137393951" green="0.58039218187332153" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="rDx-IM-ykx" firstAttribute="top" secondItem="UkU-YI-Zh0" secondAttribute="bottom" constant="141" id="3NU-5O-yq1"/>
+                <constraint firstItem="rDx-IM-ykx" firstAttribute="centerX" secondItem="UkU-YI-Zh0" secondAttribute="centerX" id="4OR-3i-gHx"/>
+                <constraint firstItem="rDx-IM-ykx" firstAttribute="top" secondItem="UkU-YI-Zh0" secondAttribute="bottom" constant="8" symbolic="YES" id="JrS-IQ-tjn"/>
                 <constraint firstItem="UkU-YI-Zh0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="192" id="OQy-ff-7l7"/>
                 <constraint firstAttribute="trailing" secondItem="UkU-YI-Zh0" secondAttribute="trailing" constant="2" id="PmP-Do-3eE"/>
-                <constraint firstItem="rDx-IM-ykx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="142" id="QOd-Yb-2Ks"/>
                 <constraint firstItem="UkU-YI-Zh0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="2" id="gAn-0z-gv7"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

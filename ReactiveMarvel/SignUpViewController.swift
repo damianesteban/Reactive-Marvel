@@ -15,8 +15,12 @@ class SignUpViewController: UIViewController, SignupValidator {
     
     typealias ValidationResult = (valid: Bool, message: String)
     
+    let disposeBag = DisposeBag()
+    
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var submitSignupButton: UIButton!
     
     convenience init() {
         self.init(nibName: "SignUpViewController", bundle: nil)
@@ -24,18 +28,41 @@ class SignUpViewController: UIViewController, SignupValidator {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTextUI()
         
         let usernameValid = emailAddressTextField.rx_text
-            .map { self.validateUsername($0) }
+            .map { $0.characters.count >= 3 }
             .shareReplay(1)
         
         let passwordValid = passwordTextField.rx_text
-            .map { self.validatePassword($0) }
+            .map { $0.characters.count >= 3 }
             .shareReplay(1)
         
+        let combinedSignupValuesValid = Observable.combineLatest(usernameValid, passwordValid) { $0 && $1 }
+            .shareReplay(1)
         
-
+        usernameValid
+            .bindTo(passwordTextField.rx_enabled)
+            .addDisposableTo(disposeBag)
+        
+        combinedSignupValuesValid
+            .bindTo(submitSignupButton.rx_enabled)
+            .addDisposableTo(disposeBag)
+        
+        submitSignupButton.rx_tap
+            .subscribeNext {
+                print("User is validated")
+                AppRouter.presentNavigationController(with: self)
+            }
+            .addDisposableTo(disposeBag)
         // Do any additional setup after loading the view.
+    }
+    
+    func configureTextUI() {
+        emailAddressTextField.placeholder = "username"
+        emailAddressTextField.clearButtonMode = .WhileEditing
+        passwordTextField.placeholder = "password"
+        
     }
     
     // MARK: SignupValidator protocol methods

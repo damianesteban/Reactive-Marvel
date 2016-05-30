@@ -43,6 +43,7 @@ class BaseViewController: UIViewController {
         let superCellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.registerNib(superCellNib, forCellReuseIdentifier: cellIdentifier)
         tableView.estimatedRowHeight = 100
+        searchTextField.placeholder = "Search for a Marvel Character..."
         setupRx()
     }
 
