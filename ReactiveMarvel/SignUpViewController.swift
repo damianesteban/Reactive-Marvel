@@ -71,7 +71,6 @@ class SignUpViewController: UIViewController, SignupValidator {
     // MARK: SignupValidator protocol methods
     func validateUsername(username: String) -> ValidationResult {
         return username.characters.count < 6 ? false : true
-
     }
     
     func validatePassword(password: String) -> ValidationResult {
@@ -90,6 +89,7 @@ extension SignUpViewController {
         emailAddressTextField.placeholder = "username"
         emailAddressTextField.clearButtonMode = .WhileEditing
         passwordTextField.placeholder = "password"
+        passwordTextField.secureTextEntry = true
         
         emailAddressTextField.layer.borderWidth = 1
         passwordTextField.layer.borderWidth = 1
