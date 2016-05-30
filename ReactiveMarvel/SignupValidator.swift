@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 protocol SignupValidator {
-    associatedtype ValidationResult = (valid: Bool, message: String)
-    func validateUsername(username: String) -> Observable<ValidationResult>
-    func validatePassword(password: String) -> Observable<ValidationResult>
+    associatedtype ValidationResult = Bool
+    func validateUsername(username: String) -> ValidationResult
+    func validatePassword(password: String) -> ValidationResult
 }

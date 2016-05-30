@@ -13,7 +13,7 @@ import RxCocoa
 
 class SignUpViewController: UIViewController, SignupValidator {
     
-    typealias ValidationResult = (valid: Bool, message: String)
+    typealias ValidationResult = Bool
     
     let disposeBag = DisposeBag()
     
@@ -31,20 +31,30 @@ class SignUpViewController: UIViewController, SignupValidator {
         configureTextUI()
         
         let usernameValid = emailAddressTextField.rx_text
-            .map { $0.characters.count >= 3 }
+            .map { return self.validateUsername($0) }
             .shareReplay(1)
         
         let passwordValid = passwordTextField.rx_text
-            .map { $0.characters.count >= 3 }
+            .map { self.validatePassword($0) }
             .shareReplay(1)
         
         let combinedSignupValuesValid = Observable.combineLatest(usernameValid, passwordValid) { $0 && $1 }
             .shareReplay(1)
         
         usernameValid
-            .bindTo(passwordTextField.rx_enabled)
-            .addDisposableTo(disposeBag)
+            .map { valid in
+                return valid ? UIColor.greenColor() : UIColor.redColor()
+            }.subscribeNext { color in
+                self.emailAddressTextField.layer.borderColor = color.CGColor
+            }.addDisposableTo(disposeBag)
         
+        passwordValid
+            .map { valid in
+                return valid ? UIColor.greenColor() : UIColor.redColor()
+            }.subscribeNext { color in
+                self.passwordTextField.layer.borderColor = color.CGColor
+            }.addDisposableTo(disposeBag)
+
         combinedSignupValuesValid
             .bindTo(submitSignupButton.rx_enabled)
             .addDisposableTo(disposeBag)
@@ -55,7 +65,6 @@ class SignUpViewController: UIViewController, SignupValidator {
                 AppRouter.presentNavigationController(with: self)
             }
             .addDisposableTo(disposeBag)
-        // Do any additional setup after loading the view.
     }
     
     func configureTextUI() {
@@ -63,23 +72,19 @@ class SignUpViewController: UIViewController, SignupValidator {
         emailAddressTextField.clearButtonMode = .WhileEditing
         passwordTextField.placeholder = "password"
         
+        emailAddressTextField.layer.borderWidth = 1
+        passwordTextField.layer.borderWidth = 1
+        
     }
     
     // MARK: SignupValidator protocol methods
-    func validateUsername(username: String) -> Observable<ValidationResult> {
-        if username.characters.count == 0 {
-            return Observable.just((false, "username is empty"))
-        } else {
-            return Observable.just((true, "username is valid"))
-        }
+    func validateUsername(username: String) -> ValidationResult {
+        return username.characters.count < 6 ? false : true
+
     }
     
-    func validatePassword(password: String) -> Observable<ValidationResult> {
-        if password.characters.count == 0 {
-            return Observable.just((false, "username is empty"))
-        } else {
-            return Observable.just((true, "password is valid"))
-        }
+    func validatePassword(password: String) -> ValidationResult {
+        return password.characters.count < 6 ? false : true
     }
     
     override func didReceiveMemoryWarning() {
