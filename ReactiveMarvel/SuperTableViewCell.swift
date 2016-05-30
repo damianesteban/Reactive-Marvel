@@ -30,7 +30,6 @@ class SuperTableViewCell: UITableViewCell {
     
     func configure(with superModel: Super) {
         superImageView.hnk_setImageFromURL(NSURL(string: superModel.imageURLString)!)
-        print(superModel.imageURLString)
         superNameLabel.text = superModel.name
         superDescriptionLabel.text = superModel.description
     }
