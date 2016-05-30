@@ -44,14 +44,14 @@ class SignUpViewController: UIViewController, SignupValidator {
         // MARK: - Observers
         usernameValid
             .map { valid in
-                return valid ? UIColor.greenColor() : UIColor.redColor()
+                return valid ? UIColor.greenColor() : UIColor.clearColor()
             }.subscribeNext { [unowned self] color in
                 self.emailAddressTextField.layer.borderColor = color.CGColor
             }.addDisposableTo(disposeBag)
         
         passwordValid
             .map { valid in
-                return valid ? UIColor.greenColor() : UIColor.redColor()
+                return valid ? UIColor.greenColor() : UIColor.clearColor()
             }.subscribeNext { [unowned self] color in
                 self.passwordTextField.layer.borderColor = color.CGColor
             }.addDisposableTo(disposeBag)
