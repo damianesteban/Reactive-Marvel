@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController, SignupValidator {
     
     let disposeBag = DisposeBag()
     
+    @IBOutlet weak var appTitleLabel: UILabel!
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var submitSignupButton: UIButton!
@@ -66,6 +67,14 @@ class SignUpViewController: UIViewController, SignupValidator {
                 AppRouter.presentNavigationController(with: self)
             }
             .addDisposableTo(disposeBag)
+        
+        //Observable.combineLatest(emailAddressTextField.rx_text, passwordTextField.rx_text) { textValueOne, textValueTwo in
+            //return (Int(textValueOne) ?? 0) + (Int(textValueTwo) ?? 0)
+            //}
+            //.subscribeNext { number in
+                //print(number)
+        //}
+        //.addDisposableTo(disposeBag)
     }
     
     // MARK: SignupValidator protocol methods
@@ -93,5 +102,7 @@ extension SignUpViewController {
         
         emailAddressTextField.layer.borderWidth = 1
         passwordTextField.layer.borderWidth = 1
+        
+        appTitleLabel.font = UIFont.Font.Roboto.Regular.font(22)
     }
 }

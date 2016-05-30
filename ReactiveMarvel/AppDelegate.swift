@@ -22,6 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //let navigationController = UINavigationController(rootViewController: baseViewController)
         self.window!.rootViewController = signupViewController
         self.window!.backgroundColor = UIColor.whiteColor()
+        
+        let fonts = UIFont.familyNames().map { String($0) }
+            .map { UIFont.fontNamesForFamilyName($0) }
+            .sort { (a, b) -> Bool in
+                return a.first < b.first
+        }
+        
+        print(fonts)
+        
         self.window!.makeKeyAndVisible()
         return true
     }
