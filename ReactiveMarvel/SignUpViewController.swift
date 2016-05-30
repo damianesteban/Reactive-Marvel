@@ -19,7 +19,6 @@ class SignUpViewController: UIViewController, SignupValidator {
     
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var submitSignupButton: UIButton!
     
     convenience init() {
@@ -28,8 +27,9 @@ class SignUpViewController: UIViewController, SignupValidator {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTextUI()
+        configureUITextFields()
         
+        // MARK: - Observables
         let usernameValid = emailAddressTextField.rx_text
             .map { return self.validateUsername($0) }
             .shareReplay(1)
@@ -41,17 +41,18 @@ class SignUpViewController: UIViewController, SignupValidator {
         let combinedSignupValuesValid = Observable.combineLatest(usernameValid, passwordValid) { $0 && $1 }
             .shareReplay(1)
         
+        // MARK: - Observers
         usernameValid
             .map { valid in
                 return valid ? UIColor.greenColor() : UIColor.redColor()
-            }.subscribeNext { color in
+            }.subscribeNext { [unowned self] color in
                 self.emailAddressTextField.layer.borderColor = color.CGColor
             }.addDisposableTo(disposeBag)
         
         passwordValid
             .map { valid in
                 return valid ? UIColor.greenColor() : UIColor.redColor()
-            }.subscribeNext { color in
+            }.subscribeNext { [unowned self] color in
                 self.passwordTextField.layer.borderColor = color.CGColor
             }.addDisposableTo(disposeBag)
 
@@ -65,16 +66,6 @@ class SignUpViewController: UIViewController, SignupValidator {
                 AppRouter.presentNavigationController(with: self)
             }
             .addDisposableTo(disposeBag)
-    }
-    
-    func configureTextUI() {
-        emailAddressTextField.placeholder = "username"
-        emailAddressTextField.clearButtonMode = .WhileEditing
-        passwordTextField.placeholder = "password"
-        
-        emailAddressTextField.layer.borderWidth = 1
-        passwordTextField.layer.borderWidth = 1
-        
     }
     
     // MARK: SignupValidator protocol methods
@@ -91,16 +82,16 @@ class SignUpViewController: UIViewController, SignupValidator {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
+
+extension SignUpViewController {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func configureUITextFields() {
+        emailAddressTextField.placeholder = "username"
+        emailAddressTextField.clearButtonMode = .WhileEditing
+        passwordTextField.placeholder = "password"
+        
+        emailAddressTextField.layer.borderWidth = 1
+        passwordTextField.layer.borderWidth = 1
     }
-    */
-
 }
