@@ -18,6 +18,7 @@ struct ColorPalette {
     static let BlackPrimary = UIColor(red:0.13, green:0.13, blue:0.13, alpha:1.00)
     static let GraySecondary = UIColor(red:0.44, green:0.44, blue:0.44, alpha:1.00)
     static let GrayDivider = UIColor(red:0.71, green:0.71, blue:0.71, alpha:1.00)
+    static let GreenAccent = UIColor(red:0.22, green:0.69, blue:0.27, alpha:1.00)
 }
 
 protocol FontConvertible {
@@ -30,6 +31,22 @@ extension UIFont {
             case Regular = "Roboto-Regular"
             case Italic = "Roboto-Italic"
             case Bold = "Roboto-Bold"
+            
+            func font(size: CGFloat) -> UIFont { return UIFont(name:self.rawValue, size:size)!}
+        }
+        
+        enum RobotoCondensed: String, FontConvertible {
+            case Regular = "RobotoCondensed-Regular"
+            case Italic = "RobotoCondensed-Italic"
+            case Bold = "RobotoCondensed-Bold"
+            
+            func font(size: CGFloat) -> UIFont { return UIFont(name:self.rawValue, size:size)!}
+        }
+        
+        enum RobotoSlab: String, FontConvertible {
+            case Regular = "RobotoSlab-Regular"
+            case Italic = "RobotoSlab-Italic"
+            case Bold = "RobotoSlab-Bold"
             
             func font(size: CGFloat) -> UIFont { return UIFont(name:self.rawValue, size:size)!}
         }

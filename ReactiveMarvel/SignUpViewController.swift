@@ -67,23 +67,15 @@ class SignUpViewController: UIViewController, SignupValidator {
                 AppRouter.presentNavigationController(with: self)
             }
             .addDisposableTo(disposeBag)
-        
-        //Observable.combineLatest(emailAddressTextField.rx_text, passwordTextField.rx_text) { textValueOne, textValueTwo in
-            //return (Int(textValueOne) ?? 0) + (Int(textValueTwo) ?? 0)
-            //}
-            //.subscribeNext { number in
-                //print(number)
-        //}
-        //.addDisposableTo(disposeBag)
     }
     
     // MARK: SignupValidator protocol methods
     func validateUsername(username: String) -> ValidationResult {
-        return username.characters.count < 6 ? false : true
+        return username.characters.count > 6 ? true : false
     }
     
     func validatePassword(password: String) -> ValidationResult {
-        return password.characters.count < 6 ? false : true
+        return password.characters.count > 6 ? true : false
     }
     
     override func didReceiveMemoryWarning() {
