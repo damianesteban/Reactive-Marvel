@@ -45,14 +45,14 @@ class SignUpViewController: UIViewController, SignupValidator {
         // MARK: - Observers
         usernameValid
             .map { valid in
-                return valid ? UIColor.greenColor() : UIColor.clearColor()
+                return valid ? ColorPalette.GreenAccent : UIColor.clearColor()
             }.subscribeNext { [unowned self] color in
                 self.emailAddressTextField.layer.borderColor = color.CGColor
             }.addDisposableTo(disposeBag)
         
         passwordValid
             .map { valid in
-                return valid ? UIColor.greenColor() : UIColor.clearColor()
+                return valid ? ColorPalette.GreenAccent : UIColor.clearColor()
             }.subscribeNext { [unowned self] color in
                 self.passwordTextField.layer.borderColor = color.CGColor
             }.addDisposableTo(disposeBag)
@@ -95,6 +95,11 @@ extension SignUpViewController {
         emailAddressTextField.layer.borderWidth = 1
         passwordTextField.layer.borderWidth = 1
         
-        appTitleLabel.font = UIFont.Font.Roboto.Regular.font(22)
+        //appTitleLabel.font = UIFont.Font.Roboto.Regular.font(22)
+        appTitleLabel.font = UIFont.Font.RobotoSlab.Regular.font(22)
+    }
+    
+    func configureUIAppearance() {
+        view.backgroundColor = ColorPalette.BluePrimary
     }
 }
