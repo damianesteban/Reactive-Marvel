@@ -44,6 +44,9 @@
 		FB8825D71CF7D01800903711 /* MarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8825D61CF7D01800903711 /* MarvelService.swift */; };
 		FB8825DB1CF7D70200903711 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8825D91CF7D70200903711 /* BaseViewController.swift */; };
 		FB8825DC1CF7D70200903711 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB8825DA1CF7D70200903711 /* BaseViewController.xib */; };
+		FBB6A65F1CFF597B00664E2E /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB6A65D1CFF597B00664E2E /* CharacterDetailViewController.swift */; };
+		FBB6A6601CFF597B00664E2E /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB6A65E1CFF597B00664E2E /* CharacterDetailViewController.xib */; };
+		FBB6A6621CFF5A8100664E2E /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB6A6611CFF5A8100664E2E /* Comic.swift */; };
 		FBEFE5361CFB73AB0010C271 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE5341CFB73AB0010C271 /* SignUpViewController.swift */; };
 		FBEFE5371CFB73AB0010C271 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */; };
 		FBEFE5391CFB7C5B0010C271 /* SignupValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE5381CFB7C5B0010C271 /* SignupValidator.swift */; };
@@ -108,6 +111,9 @@
 		FB8825D61CF7D01800903711 /* MarvelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelService.swift; sourceTree = "<group>"; };
 		FB8825D91CF7D70200903711 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FB8825DA1CF7D70200903711 /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		FBB6A65D1CFF597B00664E2E /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		FBB6A65E1CFF597B00664E2E /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
+		FBB6A6611CFF5A8100664E2E /* Comic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		FBEFE5341CFB73AB0010C271 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		FBEFE5381CFB7C5B0010C271 /* SignupValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupValidator.swift; sourceTree = "<group>"; };
@@ -263,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				FB8825D01CF7CC2700903711 /* Super.swift */,
+				FBB6A6611CFF5A8100664E2E /* Comic.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -293,6 +300,8 @@
 				FBEFE5341CFB73AB0010C271 /* SignUpViewController.swift */,
 				FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */,
 				FBEFE53A1CFBBF310010C271 /* RMNavigationController.swift */,
+				FBB6A65D1CFF597B00664E2E /* CharacterDetailViewController.swift */,
+				FBB6A65E1CFF597B00664E2E /* CharacterDetailViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -395,6 +404,7 @@
 				FB7787E51CFCE88300A96658 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				FB3ABB4E1CFE8E19002DB2D2 /* RobotoSlab-Thin.ttf in Resources */,
 				FB7787E21CFCE88300A96658 /* Roboto-Thin.ttf in Resources */,
+				FBB6A6601CFF597B00664E2E /* CharacterDetailViewController.xib in Resources */,
 				FB7787E81CFCE88300A96658 /* RobotoCondensed-LightItalic.ttf in Resources */,
 				FB7787DF1CFCE88300A96658 /* Roboto-Medium.ttf in Resources */,
 				FB3ABB4D1CFE8E19002DB2D2 /* RobotoSlab-Regular.ttf in Resources */,
@@ -536,10 +546,12 @@
 				FB8825B51CF7C9F900903711 /* AppDelegate.swift in Sources */,
 				FB6AA19A1CFA231A007434E9 /* ActivityIndicator.swift in Sources */,
 				FB8825D71CF7D01800903711 /* MarvelService.swift in Sources */,
+				FBB6A6621CFF5A8100664E2E /* Comic.swift in Sources */,
 				FBEFE5391CFB7C5B0010C271 /* SignupValidator.swift in Sources */,
 				FBEFE5361CFB73AB0010C271 /* SignUpViewController.swift in Sources */,
 				FBEFE53D1CFBBFC60010C271 /* AppRouter.swift in Sources */,
 				FB8825D41CF7CE4800903711 /* JSONable.swift in Sources */,
+				FBB6A65F1CFF597B00664E2E /* CharacterDetailViewController.swift in Sources */,
 				FBEFE53B1CFBBF310010C271 /* RMNavigationController.swift in Sources */,
 				FB3ACFC11CF8BFE700A32A4C /* SuperTableViewCell.swift in Sources */,
 			);
