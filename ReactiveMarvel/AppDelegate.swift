@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //let navigationController = UINavigationController(rootViewController: baseViewController)
         self.window!.rootViewController = signupViewController
         self.window!.backgroundColor = UIColor.whiteColor()
+        configureNavbarAppearance()
         
         let fonts = UIFont.familyNames().map { String($0) }
             .map { UIFont.fontNamesForFamilyName($0) }
@@ -55,6 +56,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // MARK: - UINavigationController appearance configuration
+    func configureNavbarAppearance() {
+        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UINavigationController.self]).barStyle = .Default
+        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UINavigationController.self]).barTintColor = ColorPalette.BluePrimary
+        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UINavigationController.self]).tintColor = ColorPalette.RedAccent
+        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UINavigationController.self]).translucent = false
+        
+        UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UINavigationController.self]).titleTextAttributes =
+            [NSForegroundColorAttributeName: ColorPalette.WhitePrimary, NSFontAttributeName: UIFont.Font.Roboto.Regular.font(17)]
+        
+        UIBarButtonItem.appearanceWhenContainedInInstancesOfClasses([UINavigationController.self]).setTitleTextAttributes(
+            [NSForegroundColorAttributeName: ColorPalette.WhitePrimary,
+            NSFontAttributeName: UIFont.Font.Roboto.Regular.font(17)], forState: .Normal)
     }
 
 

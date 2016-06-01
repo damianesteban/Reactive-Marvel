@@ -30,7 +30,7 @@ class BaseViewController: UIViewController {
         return searchTextField
             .rx_text
             .throttle(0.5, scheduler: MainScheduler.instance)
-            .filter { $0.characters.count > 0 }
+            .filter { $0.characters.count > 1 }
             .distinctUntilChanged()
     }
     
@@ -40,6 +40,9 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Reactive Marvel"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Bookmarks,
+                                                            target: self, action: #selector(addTapped))
         let superCellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.registerNib(superCellNib, forCellReuseIdentifier: cellIdentifier)
         tableView.estimatedRowHeight = 100
@@ -63,17 +66,11 @@ class BaseViewController: UIViewController {
                 cell.configure(with: item)
         }.addDisposableTo(disposeBag)
         
-        // Displays an activity indicator in the middle of the search bar.
-        // TODO: Refactor to use PKHUD (or similar).
-        //superQueryViewModel.activityIndicator
-            //.drive(networkActivityIndicator.rx_animating)
-            //.addDisposableTo(disposeBag)
-        
-        // Displays network activity indicator in upper right hand corner
+        // Displays network activity indicator in upper left hand corner
         // TODO: Use full size activity indicator / HUD
-        //superQueryViewModel.activityIndicator
-            //.drive(UIApplication.sharedApplication().rx_networkActivityIndicatorVisible)
-            //.addDisposableTo(disposeBag)
+        superQueryViewModel.activityIndicator
+            .drive(UIApplication.sharedApplication().rx_networkActivityIndicatorVisible)
+            .addDisposableTo(disposeBag)
         
         // If the user clicks on a cell and the keyboard is visible,
         // please hide it.
@@ -84,6 +81,10 @@ class BaseViewController: UIViewController {
                     self.view.endEditing(true)
                 }
             }.addDisposableTo(disposeBag)
+    }
+    
+    func addTapped() {
+        print("Someone tapped me")
     }
 
 }

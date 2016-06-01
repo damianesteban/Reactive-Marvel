@@ -29,8 +29,20 @@ extension UIFont {
         enum Roboto: String, FontConvertible {
             case Regular = "Roboto-Regular"
             case Italic = "Roboto-Italic"
+            case Bold = "Roboto-Bold"
             
             func font(size: CGFloat) -> UIFont { return UIFont(name:self.rawValue, size:size)!}
         }
+    }
+}
+
+extension UIFont {
+    
+    class func avenirNextFont(size size: CGFloat) -> UIFont {
+        return UIFont(name: "AvenirNext-Regular", size: size)!
+    }
+    
+    class func avenirNextBoldFont(size size: CGFloat) -> UIFont {
+        return UIFont(name: "AvenirNext-Bold", size: size)!
     }
 }
