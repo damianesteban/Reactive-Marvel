@@ -50,6 +50,7 @@ class BaseViewController: UIViewController {
         tableView.estimatedRowHeight = 150
         searchTextField.placeholder = "Search for a Marvel Character..."
         setupRx()
+        configureRowClicked()   
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,6 +90,16 @@ class BaseViewController: UIViewController {
             }.addDisposableTo(disposeBag)
     }
     
+    func configureRowClicked() {
+        tableView.rx_modelSelected(Super.self)
+            .asDriver()
+            .driveNext { model in
+                let cdvc = CharacterDetailViewController()
+                cdvc.model = model
+                AppRouter.presentDetailViewController(from: self, toViewController: cdvc)
+            }.addDisposableTo(disposeBag)
+        
+    }
     func addTapped() {
         print("Someone tapped me")
     }

@@ -12,14 +12,16 @@ import RxCocoa
 
 class CharacterDetailViewController: UIViewController {
 
-    
+    var model: Super?
     convenience init() {
         self.init(nibName: "CharacterDetailViewController", bundle: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let model = model {
+            print(model)
+        }
         // Do any additional setup after loading the view.
     }
 

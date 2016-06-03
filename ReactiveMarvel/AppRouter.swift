@@ -15,4 +15,8 @@ struct AppRouter {
         let navController = RMNavigationController(rootViewController: BaseViewController())
         viewController.presentViewController(navController, animated: true, completion: nil)
     }
+    
+    static func presentDetailViewController(from viewController: UIViewController, toViewController:UIViewController) {
+        viewController.presentViewController(toViewController, animated: true, completion: nil)
+    }
 }
