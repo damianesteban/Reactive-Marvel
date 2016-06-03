@@ -13,7 +13,7 @@
 		FB3ABB4C1CFE8E19002DB2D2 /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB3ABB481CFE8E19002DB2D2 /* RobotoSlab-Light.ttf */; };
 		FB3ABB4D1CFE8E19002DB2D2 /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB3ABB491CFE8E19002DB2D2 /* RobotoSlab-Regular.ttf */; };
 		FB3ABB4E1CFE8E19002DB2D2 /* RobotoSlab-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB3ABB4A1CFE8E19002DB2D2 /* RobotoSlab-Thin.ttf */; };
-		FB3ACFBD1CF8B1DB00A32A4C /* SuperQueryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3ACFBC1CF8B1DB00A32A4C /* SuperQueryViewModel.swift */; };
+		FB3ACFBD1CF8B1DB00A32A4C /* CharactersQueryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3ACFBC1CF8B1DB00A32A4C /* CharactersQueryViewModel.swift */; };
 		FB3ACFC11CF8BFE700A32A4C /* SuperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3ACFBF1CF8BFE700A32A4C /* SuperTableViewCell.swift */; };
 		FB3ACFC21CF8BFE700A32A4C /* SuperTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3ACFC01CF8BFE700A32A4C /* SuperTableViewCell.xib */; };
 		FB6AA19A1CFA231A007434E9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6AA1991CFA231A007434E9 /* ActivityIndicator.swift */; };
@@ -76,7 +76,7 @@
 		FB3ABB481CFE8E19002DB2D2 /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
 		FB3ABB491CFE8E19002DB2D2 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
 		FB3ABB4A1CFE8E19002DB2D2 /* RobotoSlab-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Thin.ttf"; sourceTree = "<group>"; };
-		FB3ACFBC1CF8B1DB00A32A4C /* SuperQueryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperQueryViewModel.swift; sourceTree = "<group>"; };
+		FB3ACFBC1CF8B1DB00A32A4C /* CharactersQueryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersQueryViewModel.swift; sourceTree = "<group>"; };
 		FB3ACFBF1CF8BFE700A32A4C /* SuperTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperTableViewCell.swift; sourceTree = "<group>"; };
 		FB3ACFC01CF8BFE700A32A4C /* SuperTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuperTableViewCell.xib; sourceTree = "<group>"; };
 		FB6AA1991CFA231A007434E9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 		FB3ACFBB1CF8B1C100A32A4C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				FB3ACFBC1CF8B1DB00A32A4C /* SuperQueryViewModel.swift */,
+				FB3ACFBC1CF8B1DB00A32A4C /* CharactersQueryViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -541,7 +541,7 @@
 			files = (
 				FBEFE5401CFCC45E0010C271 /* ColorsFontsImages.swift in Sources */,
 				FB8825DB1CF7D70200903711 /* BaseViewController.swift in Sources */,
-				FB3ACFBD1CF8B1DB00A32A4C /* SuperQueryViewModel.swift in Sources */,
+				FB3ACFBD1CF8B1DB00A32A4C /* CharactersQueryViewModel.swift in Sources */,
 				FB8825D11CF7CC2700903711 /* CharacterModel.swift in Sources */,
 				FB8825B51CF7C9F900903711 /* AppDelegate.swift in Sources */,
 				FB6AA19A1CFA231A007434E9 /* ActivityIndicator.swift in Sources */,

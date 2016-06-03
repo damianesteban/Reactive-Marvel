@@ -15,6 +15,8 @@ struct CharacterModel: JSONAbleType {
     let description: String
     let imageURLString: String
     
+    let comics: [Comic]? = nil
+    
     static func fromJSON(json: JSON) -> CharacterModel {
         let name = json["name"].stringValue
         let description = json["description"].stringValue
