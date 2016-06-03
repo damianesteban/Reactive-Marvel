@@ -17,6 +17,8 @@ class BaseViewController: UIViewController {
 
     @IBOutlet weak var searchTextField: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var networkActivityIndicatorView: UIActivityIndicatorView!
+    
     
     let disposeBag = DisposeBag()
     var superQueryViewModel: SuperQueryViewModel!
@@ -45,7 +47,7 @@ class BaseViewController: UIViewController {
                                                             target: self, action: #selector(addTapped))
         let superCellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.registerNib(superCellNib, forCellReuseIdentifier: cellIdentifier)
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 150
         searchTextField.placeholder = "Search for a Marvel Character..."
         setupRx()
     }
@@ -70,6 +72,10 @@ class BaseViewController: UIViewController {
         // TODO: Use full size activity indicator / HUD
         superQueryViewModel.activityIndicator
             .drive(UIApplication.sharedApplication().rx_networkActivityIndicatorVisible)
+            .addDisposableTo(disposeBag)
+        
+        superQueryViewModel.activityIndicator
+            .drive(networkActivityIndicatorView.rx_animating)
             .addDisposableTo(disposeBag)
         
         // If the user clicks on a cell and the keyboard is visible,

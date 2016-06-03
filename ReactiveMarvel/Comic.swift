@@ -16,7 +16,6 @@ struct Comic: JSONAbleType {
     let format: String
     
     let seriesName: String
-    
     let imageURLString: String
     
     static func fromJSON(json: JSON) -> Comic {
