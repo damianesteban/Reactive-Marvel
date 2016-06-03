@@ -28,7 +28,7 @@ class SuperTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with superModel: Super) {
+    func configure(with superModel: CharacterModel) {
         superImageView.hnk_setImageFromURL(NSURL(string: superModel.imageURLString)!)
         superNameLabel.text = superModel.name
         superDescriptionLabel.text = superModel.description

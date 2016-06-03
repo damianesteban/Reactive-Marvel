@@ -12,27 +12,27 @@ import RxCocoa
 import SwiftyJSON
 import RxSwift
 
-struct SuperQueryViewModel {
+struct CharactersQueryViewModel {
     
     let query: Observable<String>
     let activityIndicator = ActivityIndicator()
     
-    func trackSupers() -> Observable<[Super]> {
+    func trackSupers() -> Observable<[CharacterModel]> {
         return query
             .observeOn(MainScheduler.instance)
-            .flatMapLatest { query -> Observable<[Super]> in
+            .flatMapLatest { query -> Observable<[CharacterModel]> in
                 return self.fetchSupers(query)
         }
     }
 
-    internal func fetchSupers(query: String) -> Observable<[Super]> {
+    internal func fetchSupers(query: String) -> Observable<[CharacterModel]> {
         return MarvelAPIProvider.request(.Supers(query))
             .trackActivity(self.activityIndicator)
             .observeOn(MainScheduler.instance)
             .debug()
             .mapJSON()
             .map { json in
-                return Super.arrayFromJSON(json)
+                return CharacterModel.arrayFromJSON(json)
         }
     }
 }

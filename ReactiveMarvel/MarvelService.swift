@@ -49,7 +49,7 @@ private extension String {
 }
 
 enum MarvelAPI {
-    case Supers(String)
+    case Supers(String), Comics(String)
 }
 
 extension MarvelAPI: TargetType {
@@ -59,6 +59,8 @@ extension MarvelAPI: TargetType {
         switch self {
         case .Supers(_):
             return "/characters"
+        case .Comics(let characterId):
+            return "/characters/\(characterId)/comics"
         }
     }
     
@@ -73,12 +75,18 @@ extension MarvelAPI: TargetType {
                     "ts": cryptoKeys.ts,
                     "apikey": cryptoKeys.publicKey,
                     "hash": cryptoKeys.hash]
+        case .Comics(_):
+            return ["ts": cryptoKeys.ts,
+                    "apiKey": cryptoKeys.publicKey,
+                    "hash": cryptoKeys.hash]
         }
     }
     
     var sampleData: NSData {
         switch self {
         case .Supers(_):
+            return "Half measures are as bad as nothing at all.".dataUsingEncoding(NSUTF8StringEncoding)!
+        case .Comics(_):
             return "Half measures are as bad as nothing at all.".dataUsingEncoding(NSUTF8StringEncoding)!
         }
     }

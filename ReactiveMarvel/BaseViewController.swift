@@ -19,14 +19,13 @@ class BaseViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var networkActivityIndicatorView: UIActivityIndicatorView!
     
-    
     let disposeBag = DisposeBag()
-    var superQueryViewModel: SuperQueryViewModel!
+    var superQueryViewModel: CharactersQueryViewModel!
     let cellIdentifier = String(SuperTableViewCell)
     
     let activityIndicator = ActivityIndicator()
     
-    // We use latestQuery to initialize SuperQueryViewModel.  When the user begins typing in
+    // We use latestQuery to initialize CharactersQueryViewModel.  When the user begins typing in
     // the UISearchBar this kicks off our network request.
     var latestQuery: Observable<String> {
         return searchTextField
@@ -59,7 +58,7 @@ class BaseViewController: UIViewController {
     }
     
     func setupRx() {
-        superQueryViewModel = SuperQueryViewModel(query: latestQuery)
+        superQueryViewModel = CharactersQueryViewModel(query: latestQuery)
         
         // Binds the Super model to the cell.
         // TODO: Refactor cell to use ViewModel.
@@ -91,7 +90,7 @@ class BaseViewController: UIViewController {
     }
     
     func configureRowClicked() {
-        tableView.rx_modelSelected(Super.self)
+        tableView.rx_modelSelected(CharacterModel.self)
             .asDriver()
             .driveNext { model in
                 let cdvc = CharacterDetailViewController()

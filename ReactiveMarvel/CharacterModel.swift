@@ -9,25 +9,25 @@
 import Foundation
 import SwiftyJSON
 
-struct Super: JSONAbleType {
+struct CharacterModel: JSONAbleType {
 
     let name: String
     let description: String
     let imageURLString: String
     
-    static func fromJSON(json: JSON) -> Super {
+    static func fromJSON(json: JSON) -> CharacterModel {
         let name = json["name"].stringValue
         let description = json["description"].stringValue
         let imagePath = json["thumbnail"]["path"].stringValue
         let imageExtension = json["thumbnail"]["extension"].stringValue
         let imageURLString = "\(imagePath).\(imageExtension)"
-        return Super(name: name, description: description, imageURLString: imageURLString)
+        return CharacterModel(name: name, description: description, imageURLString: imageURLString)
     }
     
-    static func arrayFromJSON(object: AnyObject) -> [Super] {
+    static func arrayFromJSON(object: AnyObject) -> [CharacterModel] {
         let json = JSON(object)
         return json["data"]["results"].arrayValue.map {
-            return Super.fromJSON($0)
+            return CharacterModel.fromJSON($0)
         }
     }
     
