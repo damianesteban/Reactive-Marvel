@@ -12,9 +12,16 @@ PODS:
     - Moya/Core
     - RxSwift (~> 2.0)
   - Result (2.0.0)
+  - RxBlocking (2.5.0):
+    - RxSwift (~> 2.5)
   - RxCocoa (2.5.0):
     - RxSwift (~> 2.5)
+  - RxOptional (2.0.0):
+    - RxCocoa (~> 2.0)
+    - RxSwift (~> 2.0)
   - RxSwift (2.5.0)
+  - RxTests (2.5.0):
+    - RxSwift (~> 2.5)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -22,7 +29,10 @@ DEPENDENCIES:
   - CryptoSwift
   - HanekeSwift
   - Moya/RxSwift
+  - RxBlocking (~> 2.0)
   - RxCocoa
+  - RxOptional
+  - RxTests (~> 2.0)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -32,10 +42,13 @@ SPEC CHECKSUMS:
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   Moya: f7a4044719381cc6299f9ad3e0ef05f426f0557b
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  RxBlocking: 595d9ab56dde6b00beaa5aba40e95b150d2135f1
   RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
+  RxOptional: b77fb47a0190213cf8a37c7a2b7fda28160b4563
   RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
+  RxTests: 1b13bea0a138552b52aeead549ef08d578bcda9e
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 1fcc281da22f244ab4c1c7fba3f745c36ed14b1b
+PODFILE CHECKSUM: ef9efb0f1cc540e36d14cddb61332da408f56c13
 
 COCOAPODS: 1.0.0

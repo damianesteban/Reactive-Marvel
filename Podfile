@@ -9,13 +9,15 @@ target 'ReactiveMarvel' do
   pod 'CryptoSwift'
   pod 'Moya/RxSwift'
   pod 'RxCocoa'
+  pod 'RxOptional'
   pod 'SwiftyJSON'
   pod 'HanekeSwift'
   pod 'ChameleonFramework/Swift'
 
   target 'ReactiveMarvelTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'RxBlocking', '~> 2.0'
+    pod 'RxTests',    '~> 2.0'
   end
 
 end
