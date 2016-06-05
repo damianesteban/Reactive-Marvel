@@ -35,6 +35,8 @@
 		FB7787E71CFCE88300A96658 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB7787D51CFCE88300A96658 /* RobotoCondensed-Light.ttf */; };
 		FB7787E81CFCE88300A96658 /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB7787D61CFCE88300A96658 /* RobotoCondensed-LightItalic.ttf */; };
 		FB7787E91CFCE88300A96658 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB7787D71CFCE88300A96658 /* RobotoCondensed-Regular.ttf */; };
+		FB786F2D1D04963E00819A23 /* ComicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB786F2B1D04963E00819A23 /* ComicsTableViewCell.swift */; };
+		FB786F2E1D04963E00819A23 /* ComicsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB786F2C1D04963E00819A23 /* ComicsTableViewCell.xib */; };
 		FB8825B51CF7C9F900903711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8825B41CF7C9F900903711 /* AppDelegate.swift */; };
 		FB8825B71CF7C9F900903711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8825B61CF7C9F900903711 /* Assets.xcassets */; };
 		FB8825BA1CF7C9F900903711 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB8825B81CF7C9F900903711 /* LaunchScreen.storyboard */; };
@@ -99,6 +101,8 @@
 		FB7787D51CFCE88300A96658 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		FB7787D61CFCE88300A96658 /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		FB7787D71CFCE88300A96658 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		FB786F2B1D04963E00819A23 /* ComicsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsTableViewCell.swift; sourceTree = "<group>"; };
+		FB786F2C1D04963E00819A23 /* ComicsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicsTableViewCell.xib; sourceTree = "<group>"; };
 		FB8825B11CF7C9F900903711 /* ReactiveMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8825B41CF7C9F900903711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB8825B61CF7C9F900903711 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 			children = (
 				FB3ACFBF1CF8BFE700A32A4C /* SuperTableViewCell.swift */,
 				FB3ACFC01CF8BFE700A32A4C /* SuperTableViewCell.xib */,
+				FB786F2B1D04963E00819A23 /* ComicsTableViewCell.swift */,
+				FB786F2C1D04963E00819A23 /* ComicsTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 				FBB6A6601CFF597B00664E2E /* CharacterDetailViewController.xib in Resources */,
 				FB7787E81CFCE88300A96658 /* RobotoCondensed-LightItalic.ttf in Resources */,
 				FB7787DF1CFCE88300A96658 /* Roboto-Medium.ttf in Resources */,
+				FB786F2E1D04963E00819A23 /* ComicsTableViewCell.xib in Resources */,
 				FB3ABB4D1CFE8E19002DB2D2 /* RobotoSlab-Regular.ttf in Resources */,
 				FB7787DB1CFCE88300A96658 /* Roboto-BoldItalic.ttf in Resources */,
 				FB7787E71CFCE88300A96658 /* RobotoCondensed-Light.ttf in Resources */,
@@ -544,6 +551,7 @@
 			files = (
 				FBEFE5401CFCC45E0010C271 /* ColorsFontsImages.swift in Sources */,
 				FB8825DB1CF7D70200903711 /* BaseViewController.swift in Sources */,
+				FB786F2D1D04963E00819A23 /* ComicsTableViewCell.swift in Sources */,
 				FB3ACFBD1CF8B1DB00A32A4C /* CharactersQueryViewModel.swift in Sources */,
 				FB8825D11CF7CC2700903711 /* CharacterModel.swift in Sources */,
 				FB8825B51CF7C9F900903711 /* AppDelegate.swift in Sources */,

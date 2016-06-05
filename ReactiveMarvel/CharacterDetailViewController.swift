@@ -13,6 +13,7 @@ import Haneke
 
 class CharacterDetailViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var characterDetailImageView: UIImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
     @IBOutlet weak var characterdescriptionLabel: UILabel!
@@ -21,6 +22,8 @@ class CharacterDetailViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    let disposeBag = DisposeBag()
+    var characterDetailViewModel: CharacterDetailViewModel!
     var model: CharacterModel?
     
     convenience init() {
@@ -34,11 +37,14 @@ class CharacterDetailViewController: UIViewController {
             characterDetailImageView.hnk_setImageFromURL(NSURL(string: model.imageURLString)!)
             characterNameLabel.text = model.name
             characterdescriptionLabel.text = model.description
-
         }
-        // Do any additional setup after loading the view.
-    }
 
+    }
+    
+    func setupRx() {
+        // TODO: Figure out a better way to handle this.  Sloppy.
+        //characterDetailViewModel = CharacterDetailViewModel(withCollectionURIObservable: model?.comicsCollectionURIString.asObservable())
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
