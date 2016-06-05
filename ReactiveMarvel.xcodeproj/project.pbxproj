@@ -53,6 +53,7 @@
 		FBEFE53B1CFBBF310010C271 /* RMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE53A1CFBBF310010C271 /* RMNavigationController.swift */; };
 		FBEFE53D1CFBBFC60010C271 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE53C1CFBBFC60010C271 /* AppRouter.swift */; };
 		FBEFE5401CFCC45E0010C271 /* ColorsFontsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE53F1CFCC45E0010C271 /* ColorsFontsImages.swift */; };
+		FBF7C0FD1D03C30C00D7370A /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF7C0FC1D03C30C00D7370A /* CharacterDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		FBEFE53A1CFBBF310010C271 /* RMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMNavigationController.swift; sourceTree = "<group>"; };
 		FBEFE53C1CFBBFC60010C271 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		FBEFE53F1CFCC45E0010C271 /* ColorsFontsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsFontsImages.swift; sourceTree = "<group>"; };
+		FBF7C0FC1D03C30C00D7370A /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				FB3ACFBC1CF8B1DB00A32A4C /* CharactersQueryViewModel.swift */,
+				FBF7C0FC1D03C30C00D7370A /* CharacterDetailViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				FB3ACFBD1CF8B1DB00A32A4C /* CharactersQueryViewModel.swift in Sources */,
 				FB8825D11CF7CC2700903711 /* CharacterModel.swift in Sources */,
 				FB8825B51CF7C9F900903711 /* AppDelegate.swift in Sources */,
+				FBF7C0FD1D03C30C00D7370A /* CharacterDetailViewModel.swift in Sources */,
 				FB6AA19A1CFA231A007434E9 /* ActivityIndicator.swift in Sources */,
 				FB8825D71CF7D01800903711 /* MarvelService.swift in Sources */,
 				FBB6A6621CFF5A8100664E2E /* Comic.swift in Sources */,

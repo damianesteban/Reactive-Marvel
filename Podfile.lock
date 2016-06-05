@@ -5,6 +5,7 @@ PODS:
     - ChameleonFramework/Default
   - CryptoSwift (0.4.1)
   - HanekeSwift (0.10.1)
+  - Kingfisher (2.4.1)
   - Moya/Core (6.5.0):
     - Alamofire (~> 3.0)
     - Result (~> 2.0)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - ChameleonFramework/Swift
   - CryptoSwift
   - HanekeSwift
+  - Kingfisher (~> 2.4)
   - Moya/RxSwift
   - RxBlocking (~> 2.0)
   - RxCocoa
@@ -40,6 +42,7 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CryptoSwift: 25b5aff3f260967391f8fff2e9abe4254d2c6fd5
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
   Moya: f7a4044719381cc6299f9ad3e0ef05f426f0557b
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   RxBlocking: 595d9ab56dde6b00beaa5aba40e95b150d2135f1
@@ -49,6 +52,6 @@ SPEC CHECKSUMS:
   RxTests: 1b13bea0a138552b52aeead549ef08d578bcda9e
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: ef9efb0f1cc540e36d14cddb61332da408f56c13
+PODFILE CHECKSUM: 92e8d88e5d3a33910b906b3cae09beb6689bba7a
 
 COCOAPODS: 1.0.0

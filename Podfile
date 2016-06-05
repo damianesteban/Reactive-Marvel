@@ -12,6 +12,7 @@ target 'ReactiveMarvel' do
   pod 'RxOptional'
   pod 'SwiftyJSON'
   pod 'HanekeSwift'
+  pod 'Kingfisher', '~> 2.4'
   pod 'ChameleonFramework/Swift'
 
   target 'ReactiveMarvelTests' do

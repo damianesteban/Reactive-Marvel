@@ -15,6 +15,7 @@ struct CharacterModel: JSONAbleType {
     let id: Int
     let description: String
     let imageURLString: String
+    let comicsCollectionURIString: String
     
     let comics: [Comic]? = nil
     
@@ -24,8 +25,10 @@ struct CharacterModel: JSONAbleType {
         let description = json["description"].stringValue
         let imagePath = json["thumbnail"]["path"].stringValue
         let imageExtension = json["thumbnail"]["extension"].stringValue
+        let comicsCollectionURIString = json["comics"]["collectionURI"].stringValue
         let imageURLString = "\(imagePath).\(imageExtension)"
-        return CharacterModel(name: name, id: id, description: description, imageURLString: imageURLString)
+        return CharacterModel(name: name, id: id, description: description, imageURLString: imageURLString,
+                              comicsCollectionURIString: comicsCollectionURIString)
     }
     
     static func arrayFromJSON(object: AnyObject) -> [CharacterModel] {

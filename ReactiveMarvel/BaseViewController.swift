@@ -46,7 +46,7 @@ class BaseViewController: UIViewController {
                                                             target: self, action: #selector(addTapped))
         let superCellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.registerNib(superCellNib, forCellReuseIdentifier: cellIdentifier)
-        tableView.estimatedRowHeight = 150
+        tableView.estimatedRowHeight = 90
         searchTextField.placeholder = "Search for a Marvel Character..."
         setupRx()
         configureRowClicked()   

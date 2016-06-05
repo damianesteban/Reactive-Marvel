@@ -7,14 +7,13 @@
 //
 
 import UIKit
-import Haneke
+import Kingfisher
 
 class SuperTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var superImageView: UIImageView!
     @IBOutlet weak var superNameLabel: UILabel!
-    @IBOutlet weak var superDescriptionLabel: UILabel!
     
     
     override func awakeFromNib() {
@@ -29,9 +28,10 @@ class SuperTableViewCell: UITableViewCell {
     }
     
     func configure(with superModel: CharacterModel) {
-        superImageView.hnk_setImageFromURL(NSURL(string: superModel.imageURLString)!)
+        superImageView.kf_setImageWithURL(NSURL(string: superModel.imageURLString)!,
+                                     placeholderImage: nil,
+                                     optionsInfo: [.Transition(ImageTransition.Fade(1))])
         superNameLabel.text = superModel.name
-        superDescriptionLabel.text = superModel.description
     }
     
 }
