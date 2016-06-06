@@ -77,8 +77,9 @@ extension MarvelAPI: TargetType {
                     "hash": cryptoKeys.hash]
         case .Comics(_):
             return ["ts": cryptoKeys.ts,
-                    "apiKey": cryptoKeys.publicKey,
-                    "hash": cryptoKeys.hash]
+                    "apikey": cryptoKeys.publicKey,
+                    "hash": cryptoKeys.hash,
+                    "limit": 20]
         }
     }
     
