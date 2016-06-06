@@ -10,24 +10,6 @@ import Foundation
 import CryptoSwift
 import Moya
 
-struct CryptoKeys {
-    
-    let publicKey = "22cc06b67d2cf62d1f403125947e2baf"
-    let privateKey = "7fa79982a543b54ad8283546fa16456ee613be18"
-    let ts = String(random())
-    
-    var composite: String {
-        return ts + privateKey + publicKey
-    }
-    
-    var hash: String {
-        return composite.md5()
-    }
-    
-}
-
-let cryptoKeys = CryptoKeys()
-
 private func JSONResponseDataFormatter(data: NSData) -> NSData {
     do {
         let dataAsJSON = try NSJSONSerialization.JSONObjectWithData(data, options: [])
@@ -38,6 +20,7 @@ private func JSONResponseDataFormatter(data: NSData) -> NSData {
     }
 }
 
+let keys = APIKeys()
 
 let MarvelAPIProvider = RxMoyaProvider<MarvelAPI>(plugins: [NetworkLoggerPlugin(verbose: true,
     responseDataFormatter: JSONResponseDataFormatter)])
@@ -72,13 +55,13 @@ extension MarvelAPI: TargetType {
         switch self {
         case .Supers(let query):
             return ["nameStartsWith": query,
-                    "ts": cryptoKeys.ts,
-                    "apikey": cryptoKeys.publicKey,
-                    "hash": cryptoKeys.hash]
+                    "ts": keys.ts,
+                    "apikey": keys.publicKey,
+                    "hash": keys.hash]
         case .Comics(_):
-            return ["ts": cryptoKeys.ts,
-                    "apikey": cryptoKeys.publicKey,
-                    "hash": cryptoKeys.hash,
+            return ["ts": keys.ts,
+                    "apikey": keys.publicKey,
+                    "hash": keys.hash,
                     "limit": 20]
         }
     }

@@ -21,7 +21,7 @@ class BaseViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     var superQueryViewModel: CharactersQueryViewModel!
-    let cellIdentifier = String(SuperTableViewCell)
+    let cellIdentifier = String(CharacterTableViewCell)
     
     let activityIndicator = ActivityIndicator()
     
@@ -46,10 +46,9 @@ class BaseViewController: UIViewController {
                                                             target: self, action: #selector(addTapped))
         let superCellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.registerNib(superCellNib, forCellReuseIdentifier: cellIdentifier)
-        tableView.estimatedRowHeight = 90
+        tableView.estimatedRowHeight = 25
         searchTextField.placeholder = "Search for a Marvel Character..."
-        setupRx()
-        configureRowClicked()   
+        startRx()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,14 +56,14 @@ class BaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setupRx() {
+    func startRx() {
         superQueryViewModel = CharactersQueryViewModel(query: latestQuery)
         
-        // Binds the Super model to the cell.
+        // Binds the CharacterModel model to the cell.
         // TODO: Refactor cell to use ViewModel.
         superQueryViewModel
             .trackSupers()
-            .bindTo(tableView.rx_itemsWithCellIdentifier(cellIdentifier, cellType: SuperTableViewCell.self)) { (_, item, cell) in
+            .bindTo(tableView.rx_itemsWithCellIdentifier(cellIdentifier, cellType: CharacterTableViewCell.self)) { (_, item, cell) in
                 cell.configure(with: item)
         }.addDisposableTo(disposeBag)
         
@@ -88,17 +87,7 @@ class BaseViewController: UIViewController {
                 }
             }.addDisposableTo(disposeBag)
     }
-    
-    func configureRowClicked() {
-        tableView.rx_modelSelected(CharacterModel.self)
-            .asDriver()
-            .driveNext { model in
-                let cdvc = CharacterDetailViewController()
-                cdvc.model = model
-                AppRouter.presentDetailViewController(from: self, toViewController: cdvc)
-            }.addDisposableTo(disposeBag)
-        
-    }
+
     func addTapped() {
         print("Someone tapped me")
     }
