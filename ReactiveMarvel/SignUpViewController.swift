@@ -88,13 +88,14 @@ extension SignUpViewController {
     
     func configureUITextFields() {
         emailAddressTextField.placeholder = "username"
-        emailAddressTextField.clearButtonMode = .WhileEditing
         passwordTextField.placeholder = "password"
-        passwordTextField.secureTextEntry = true
         
         emailAddressTextField.layer.borderWidth = 1
         passwordTextField.layer.borderWidth = 1
         
         appTitleLabel.font = UIFont.Font.RobotoSlab.Regular.font(22)
+        
+        InputCoordinator.configureEmail(emailAddressTextField)
+        InputCoordinator.configurePassword(passwordTextField)
     }
 }

@@ -18,19 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // Override point for customization after application launch.
         let signupViewController = SignUpViewController()
-        // let baseViewController = BaseViewController()
-        //let navigationController = UINavigationController(rootViewController: baseViewController)
+
         self.window!.rootViewController = signupViewController
         self.window!.backgroundColor = UIColor.whiteColor()
         configureNavbarAppearance()
-        
-        let fonts = UIFont.familyNames().map { String($0) }
-            .map { UIFont.fontNamesForFamilyName($0) }
-            .sort { (a, b) -> Bool in
-                return a.first < b.first
-        }
-        
-        print(fonts)
         
         self.window!.makeKeyAndVisible()
         return true

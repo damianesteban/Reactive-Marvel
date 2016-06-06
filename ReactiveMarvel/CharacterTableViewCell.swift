@@ -11,10 +11,9 @@ import Kingfisher
 
 class CharacterTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var superImageView: UIImageView!
-    @IBOutlet weak var superNameLabel: UILabel!
-    
-    @IBOutlet weak var superDescriptionLabel: UILabel!
+    @IBOutlet weak var characterImageView: UIImageView!
+    @IBOutlet weak var characterNameLabel: UILabel!
+    @IBOutlet weak var characterDescriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,11 +27,11 @@ class CharacterTableViewCell: UITableViewCell {
     }
     
     func configure(with superModel: CharacterModel) {
-        superImageView.kf_setImageWithURL(NSURL(string: superModel.imageURLString)!,
+        characterImageView.kf_setImageWithURL(NSURL(string: superModel.imageURLString)!,
                                      placeholderImage: nil,
                                      optionsInfo: [.Transition(ImageTransition.Fade(1))])
-        superNameLabel.text = "Name: \(superModel.name)"
-        superDescriptionLabel.text = superModel.description.isEmpty ? "Description: No description." : "Description: \(superModel.description)"
+        characterNameLabel.text = "Name: \(superModel.name)"
+        characterDescriptionLabel.text = superModel.description.isEmpty ? "Description: No description." : "Description: \(superModel.description)"
     }
     
 }
