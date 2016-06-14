@@ -30,7 +30,7 @@ class SignUpViewController: UIViewController, SignupValidator {
         super.viewDidLoad()
         configureUITextFields()
         
-        // MARK: - Observables
+        // MARK: username and password validators
         let usernameValid = emailAddressTextField.rx_text
             .map { return self.validateUsername($0) }
             .shareReplay(1)
@@ -42,7 +42,6 @@ class SignUpViewController: UIViewController, SignupValidator {
         let combinedSignupValuesValid = Observable.combineLatest(usernameValid, passwordValid) { $0 && $1 }
             .shareReplay(1)
         
-        // MARK: - Observers
         usernameValid
             .map { valid in
                 return valid ? ColorPalette.GreenAccent : UIColor.clearColor()

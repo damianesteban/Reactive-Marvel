@@ -17,16 +17,16 @@ struct CharactersQueryViewModel {
     let query: Observable<String>
     let activityIndicator = ActivityIndicator()
     
-    func trackSupers() -> Observable<[CharacterModel]> {
+    func trackCharacters() -> Observable<[CharacterModel]> {
         return query
             .observeOn(MainScheduler.instance)
             .flatMapLatest { query -> Observable<[CharacterModel]> in
-                return self.fetchSupers(query)
+                return self.fetchCharacters(query)
         }
     }
 
-    internal func fetchSupers(query: String) -> Observable<[CharacterModel]> {
-        return MarvelAPIProvider.request(.Supers(query))
+    internal func fetchCharacters(query: String) -> Observable<[CharacterModel]> {
+        return MarvelAPIProvider.request(.Characters(query))
             .trackActivity(self.activityIndicator)
             .observeOn(MainScheduler.instance)
             .debug()

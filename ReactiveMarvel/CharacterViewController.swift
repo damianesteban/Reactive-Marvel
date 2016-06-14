@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  CharacterViewController.swift
 //  ReactiveMarvel
 //
 //  Created by Damian Esteban on 5/26/16.
@@ -13,7 +13,7 @@ import Moya
 import SwiftyJSON
 import Haneke
 
-class BaseViewController: UIViewController {
+class CharacterViewController: UIViewController {
 
     @IBOutlet weak var searchTextField: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -36,16 +36,14 @@ class BaseViewController: UIViewController {
     }
     
     convenience init() {
-        self.init(nibName: "BaseViewController", bundle: nil)
+        self.init(nibName: "CharacterViewController", bundle: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Reactive Marvel"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Bookmarks,
-                                                            target: self, action: #selector(addTapped))
-        let superCellNib = UINib(nibName: cellIdentifier, bundle: nil)
-        tableView.registerNib(superCellNib, forCellReuseIdentifier: cellIdentifier)
+        let characterCellNib = UINib(nibName: cellIdentifier, bundle: nil)
+        tableView.registerNib(characterCellNib, forCellReuseIdentifier: cellIdentifier)
         tableView.estimatedRowHeight = 25
         searchTextField.placeholder = "Search for a Marvel Character..."
         startRx()
@@ -62,13 +60,13 @@ class BaseViewController: UIViewController {
         // Binds the CharacterModel model to the cell.
         // TODO: Refactor cell to use ViewModel.
         superQueryViewModel
-            .trackSupers()
+            .trackCharacters()
             .bindTo(tableView.rx_itemsWithCellIdentifier(cellIdentifier, cellType: CharacterTableViewCell.self)) { (_, item, cell) in
                 cell.configure(with: item)
         }.addDisposableTo(disposeBag)
         
         // Displays network activity indicator in upper left hand corner
-        // TODO: Use full size activity indicator / HUD
+        // TODO: Use PKHUD, write Rx extension
         superQueryViewModel.activityIndicator
             .drive(UIApplication.sharedApplication().rx_networkActivityIndicatorVisible)
             .addDisposableTo(disposeBag)

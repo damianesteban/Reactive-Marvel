@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -88,9 +89,6 @@
                         <exclude reference="zW1-ZY-4dJ"/>
                     </mask>
                     <mask key="constraints">
-                        <exclude reference="Aeb-H3-Q1P"/>
-                        <exclude reference="PSO-PD-NPg"/>
-                        <exclude reference="hkm-Fv-1mf"/>
                         <exclude reference="67O-BB-rlP"/>
                         <exclude reference="eNc-wh-sRe"/>
                         <exclude reference="jZm-9B-hX9"/>
@@ -99,6 +97,9 @@
                         <exclude reference="7az-xH-QJ1"/>
                         <exclude reference="Qc1-uJ-55V"/>
                         <exclude reference="lpw-oY-x9G"/>
+                        <exclude reference="Aeb-H3-Q1P"/>
+                        <exclude reference="PSO-PD-NPg"/>
+                        <exclude reference="hkm-Fv-1mf"/>
                     </mask>
                 </variation>
                 <variation key="heightClass=regular-widthClass=compact">
@@ -108,9 +109,6 @@
                         <include reference="zW1-ZY-4dJ"/>
                     </mask>
                     <mask key="constraints">
-                        <include reference="Aeb-H3-Q1P"/>
-                        <include reference="PSO-PD-NPg"/>
-                        <include reference="hkm-Fv-1mf"/>
                         <include reference="67O-BB-rlP"/>
                         <include reference="eNc-wh-sRe"/>
                         <include reference="jZm-9B-hX9"/>
@@ -119,6 +117,9 @@
                         <include reference="7az-xH-QJ1"/>
                         <include reference="Qc1-uJ-55V"/>
                         <include reference="lpw-oY-x9G"/>
+                        <include reference="Aeb-H3-Q1P"/>
+                        <include reference="PSO-PD-NPg"/>
+                        <include reference="hkm-Fv-1mf"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>

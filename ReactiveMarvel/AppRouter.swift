@@ -12,7 +12,7 @@ import UIKit
 struct AppRouter {
     
     static func presentNavigationController(with viewController: UIViewController) {
-        let navController = RMNavigationController(rootViewController: BaseViewController())
+        let navController = RMNavigationController(rootViewController: CharacterViewController())
         viewController.presentViewController(navController, animated: true, completion: nil)
     }
     

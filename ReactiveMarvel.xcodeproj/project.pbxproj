@@ -42,13 +42,11 @@
 		FB8825D11CF7CC2700903711 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8825D01CF7CC2700903711 /* CharacterModel.swift */; };
 		FB8825D41CF7CE4800903711 /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8825D31CF7CE4800903711 /* JSONable.swift */; };
 		FB8825D71CF7D01800903711 /* MarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8825D61CF7D01800903711 /* MarvelService.swift */; };
-		FB8825DB1CF7D70200903711 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8825D91CF7D70200903711 /* BaseViewController.swift */; };
-		FB8825DC1CF7D70200903711 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB8825DA1CF7D70200903711 /* BaseViewController.xib */; };
+		FB8825DB1CF7D70200903711 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8825D91CF7D70200903711 /* CharacterViewController.swift */; };
+		FB8825DC1CF7D70200903711 /* CharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB8825DA1CF7D70200903711 /* CharacterViewController.xib */; };
 		FBB6A6621CFF5A8100664E2E /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB6A6611CFF5A8100664E2E /* Comic.swift */; };
 		FBD5DC601D0625E300217932 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD5DC5F1D0625E300217932 /* APIKeys.swift */; };
 		FBD5DC621D06284100217932 /* TextInputCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD5DC611D06284100217932 /* TextInputCoordinator.swift */; };
-		FBD5DC691D062CC700217932 /* cfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD5DC671D062CC700217932 /* cfTableViewCell.swift */; };
-		FBD5DC6A1D062CC700217932 /* cfTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBD5DC681D062CC700217932 /* cfTableViewCell.xib */; };
 		FBEFE5361CFB73AB0010C271 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE5341CFB73AB0010C271 /* SignUpViewController.swift */; };
 		FBEFE5371CFB73AB0010C271 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */; };
 		FBEFE5391CFB7C5B0010C271 /* SignupValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE5381CFB7C5B0010C271 /* SignupValidator.swift */; };
@@ -111,13 +109,11 @@
 		FB8825D01CF7CC2700903711 /* CharacterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		FB8825D31CF7CE4800903711 /* JSONable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONable.swift; sourceTree = "<group>"; };
 		FB8825D61CF7D01800903711 /* MarvelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelService.swift; sourceTree = "<group>"; };
-		FB8825D91CF7D70200903711 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		FB8825DA1CF7D70200903711 /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		FB8825D91CF7D70200903711 /* CharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		FB8825DA1CF7D70200903711 /* CharacterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterViewController.xib; sourceTree = "<group>"; };
 		FBB6A6611CFF5A8100664E2E /* Comic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		FBD5DC5F1D0625E300217932 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		FBD5DC611D06284100217932 /* TextInputCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputCoordinator.swift; sourceTree = "<group>"; };
-		FBD5DC671D062CC700217932 /* cfTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cfTableViewCell.swift; sourceTree = "<group>"; };
-		FBD5DC681D062CC700217932 /* cfTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cfTableViewCell.xib; sourceTree = "<group>"; };
 		FBEFE5341CFB73AB0010C271 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		FBEFE5381CFB7C5B0010C271 /* SignupValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupValidator.swift; sourceTree = "<group>"; };
@@ -179,8 +175,6 @@
 			children = (
 				FB3ACFBF1CF8BFE700A32A4C /* CharacterTableViewCell.swift */,
 				FB3ACFC01CF8BFE700A32A4C /* CharacterTableViewCell.xib */,
-				FBD5DC671D062CC700217932 /* cfTableViewCell.swift */,
-				FBD5DC681D062CC700217932 /* cfTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -303,8 +297,8 @@
 		FB8825D81CF7D6EB00903711 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FB8825D91CF7D70200903711 /* BaseViewController.swift */,
-				FB8825DA1CF7D70200903711 /* BaseViewController.xib */,
+				FB8825D91CF7D70200903711 /* CharacterViewController.swift */,
+				FB8825DA1CF7D70200903711 /* CharacterViewController.xib */,
 				FBEFE5341CFB73AB0010C271 /* SignUpViewController.swift */,
 				FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */,
 				FBEFE53A1CFBBF310010C271 /* RMNavigationController.swift */,
@@ -407,7 +401,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBD5DC6A1D062CC700217932 /* cfTableViewCell.xib in Resources */,
 				FB7787E51CFCE88300A96658 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				FB3ABB4E1CFE8E19002DB2D2 /* RobotoSlab-Thin.ttf in Resources */,
 				FB7787E21CFCE88300A96658 /* Roboto-Thin.ttf in Resources */,
@@ -419,7 +412,7 @@
 				FBEFE5371CFB73AB0010C271 /* SignUpViewController.xib in Resources */,
 				FB7787DE1CFCE88300A96658 /* Roboto-LightItalic.ttf in Resources */,
 				FB7787E01CFCE88300A96658 /* Roboto-MediumItalic.ttf in Resources */,
-				FB8825DC1CF7D70200903711 /* BaseViewController.xib in Resources */,
+				FB8825DC1CF7D70200903711 /* CharacterViewController.xib in Resources */,
 				FB7787DD1CFCE88300A96658 /* Roboto-Light.ttf in Resources */,
 				FB7787E91CFCE88300A96658 /* RobotoCondensed-Regular.ttf in Resources */,
 				FB7787E61CFCE88300A96658 /* RobotoCondensed-Italic.ttf in Resources */,
@@ -546,10 +539,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBEFE5401CFCC45E0010C271 /* ColorsFontsImages.swift in Sources */,
-				FB8825DB1CF7D70200903711 /* BaseViewController.swift in Sources */,
+				FB8825DB1CF7D70200903711 /* CharacterViewController.swift in Sources */,
 				FB3ACFBD1CF8B1DB00A32A4C /* CharactersQueryViewModel.swift in Sources */,
 				FB8825D11CF7CC2700903711 /* CharacterModel.swift in Sources */,
-				FBD5DC691D062CC700217932 /* cfTableViewCell.swift in Sources */,
 				FB8825B51CF7C9F900903711 /* AppDelegate.swift in Sources */,
 				FB6AA19A1CFA231A007434E9 /* ActivityIndicator.swift in Sources */,
 				FBD5DC601D0625E300217932 /* APIKeys.swift in Sources */,
