@@ -11,9 +11,8 @@ target 'ReactiveMarvel' do
   pod 'RxCocoa'
   pod 'RxOptional'
   pod 'SwiftyJSON'
-  pod 'HanekeSwift'
-  pod 'Kingfisher', '~> 2.4'
   pod 'ChameleonFramework/Swift'
+  pod 'moa', '~> 4.0'
 
   target 'ReactiveMarvelTests' do
     inherit! :search_paths

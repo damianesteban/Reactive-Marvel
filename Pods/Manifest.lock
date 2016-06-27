@@ -4,8 +4,7 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - CryptoSwift (0.5.1)
-  - HanekeSwift (0.10.1)
-  - Kingfisher (2.4.1)
+  - moa (4.0.0)
   - Moya/Core (6.5.0):
     - Alamofire (~> 3.0)
     - Result (~> 2.0)
@@ -28,8 +27,7 @@ PODS:
 DEPENDENCIES:
   - ChameleonFramework/Swift
   - CryptoSwift
-  - HanekeSwift
-  - Kingfisher (~> 2.4)
+  - moa (~> 4.0)
   - Moya/RxSwift
   - RxBlocking (~> 2.0)
   - RxCocoa
@@ -41,8 +39,7 @@ SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CryptoSwift: df42dda18baf6c76347a94e227dbcc0a341304bd
-  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
-  Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
+  moa: 5958c6282743c95eda68d2344fea7c196bfb1313
   Moya: f7a4044719381cc6299f9ad3e0ef05f426f0557b
   Result: 822c879f145943320cc80a9a8372378e3d699fe4
   RxBlocking: 595d9ab56dde6b00beaa5aba40e95b150d2135f1
@@ -52,6 +49,6 @@ SPEC CHECKSUMS:
   RxTests: 1b13bea0a138552b52aeead549ef08d578bcda9e
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 92e8d88e5d3a33910b906b3cae09beb6689bba7a
+PODFILE CHECKSUM: c095da04e08758e38589b45669f3b8c39cb2497b
 
 COCOAPODS: 1.0.0

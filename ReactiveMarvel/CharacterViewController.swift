@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 import Moya
 import SwiftyJSON
-import Haneke
 
 class CharacterViewController: UIViewController {
 
@@ -84,6 +83,14 @@ class CharacterViewController: UIViewController {
                     self.view.endEditing(true)
                 }
             }.addDisposableTo(disposeBag)
+        
+        tableView
+            .rx_modelSelected(CharacterModel)
+            .subscribeNext { characterModel in
+                let cdvc = CharacterDetailViewController()
+                cdvc.characterModel = characterModel
+                AppRouter.presentDetailViewController(from: self, toViewController: cdvc)
+        }.addDisposableTo(disposeBag)
     }
 
     func addTapped() {
