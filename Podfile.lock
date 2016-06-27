@@ -1,9 +1,9 @@
 PODS:
-  - Alamofire (3.4.0)
+  - Alamofire (3.4.1)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - CryptoSwift (0.4.1)
+  - CryptoSwift (0.5.1)
   - HanekeSwift (0.10.1)
   - Kingfisher (2.4.1)
   - Moya/Core (6.5.0):
@@ -12,7 +12,7 @@ PODS:
   - Moya/RxSwift (6.5.0):
     - Moya/Core
     - RxSwift (~> 2.0)
-  - Result (2.0.0)
+  - Result (2.1.1)
   - RxBlocking (2.5.0):
     - RxSwift (~> 2.5)
   - RxCocoa (2.5.0):
@@ -38,13 +38,13 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  CryptoSwift: 25b5aff3f260967391f8fff2e9abe4254d2c6fd5
+  CryptoSwift: df42dda18baf6c76347a94e227dbcc0a341304bd
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
   Moya: f7a4044719381cc6299f9ad3e0ef05f426f0557b
-  Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  Result: 822c879f145943320cc80a9a8372378e3d699fe4
   RxBlocking: 595d9ab56dde6b00beaa5aba40e95b150d2135f1
   RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
   RxOptional: b77fb47a0190213cf8a37c7a2b7fda28160b4563
