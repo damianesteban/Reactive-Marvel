@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 class CharacterTableViewCell: UITableViewCell {
     
@@ -26,11 +27,32 @@ class CharacterTableViewCell: UITableViewCell {
     }
     
     func configure(with superModel: CharacterModel) {
-        characterImageView.kf_setImageWithURL(NSURL(string: superModel.imageURLString)!,
-                                     placeholderImage: nil,
-                                     optionsInfo: [.Transition(ImageTransition.Fade(1))])
+        characterImageRequestWithNuke(superModel.imageURLString)
         characterNameLabel.text = "Name: \(superModel.name)"
         characterDescriptionLabel.text = superModel.description.isEmpty ? "Description: No description." : "Description: \(superModel.description)"
+    }
+    
+    func characterImageRequestWithNuke(urlString: String) {
+        var request = ImageRequest(URLRequest: NSURLRequest(URL: NSURL(string: urlString)!))
+        // Set target size (in pixels) and content mode that describe how to resize loaded image
+        request.targetSize = CGSize(width: 84.0, height: 79.0)
+        request.contentMode = .AspectFit
+        
+        
+        
+        // Control memory caching
+        request.memoryCacheStorageAllowed = true // true is default
+        request.memoryCachePolicy = .ReloadIgnoringCachedImage // Force reload
+        
+        // Change the priority of the underlying NSURLSessionTask
+        request.priority = NSURLSessionTaskPriorityHigh
+        
+        Nuke.taskWith(request) {
+            // - Image is resized to fill target size
+            // - Blur filter is applied
+            let image = $0.image
+            self.characterImageView.image = image
+        }.resume()
     }
     
 }

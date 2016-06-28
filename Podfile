@@ -12,7 +12,8 @@ target 'ReactiveMarvel' do
   pod 'RxOptional'
   pod 'SwiftyJSON'
   pod 'ChameleonFramework/Swift'
-  pod 'moa', '~> 4.0'
+  pod "Nuke"
+  pod "Nuke-AnimatedImage-Plugin" # optional
 
   target 'ReactiveMarvelTests' do
     inherit! :search_paths

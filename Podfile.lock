@@ -4,13 +4,17 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - CryptoSwift (0.5.1)
-  - moa (4.0.0)
+  - FLAnimatedImage (1.0.12)
   - Moya/Core (6.5.0):
     - Alamofire (~> 3.0)
     - Result (~> 2.0)
   - Moya/RxSwift (6.5.0):
     - Moya/Core
     - RxSwift (~> 2.0)
+  - Nuke (3.1.1)
+  - Nuke-AnimatedImage-Plugin (1.0.0):
+    - FLAnimatedImage (~> 1.0)
+    - Nuke (~> 3.0)
   - Result (2.1.1)
   - RxBlocking (2.5.0):
     - RxSwift (~> 2.5)
@@ -27,8 +31,9 @@ PODS:
 DEPENDENCIES:
   - ChameleonFramework/Swift
   - CryptoSwift
-  - moa (~> 4.0)
   - Moya/RxSwift
+  - Nuke
+  - Nuke-AnimatedImage-Plugin
   - RxBlocking (~> 2.0)
   - RxCocoa
   - RxOptional
@@ -39,8 +44,10 @@ SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CryptoSwift: df42dda18baf6c76347a94e227dbcc0a341304bd
-  moa: 5958c6282743c95eda68d2344fea7c196bfb1313
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Moya: f7a4044719381cc6299f9ad3e0ef05f426f0557b
+  Nuke: 75fb602d879372a68679293fdfbd758a1769880d
+  Nuke-AnimatedImage-Plugin: 5a35f5a38dcd6c9559225de1c80ac7e758bd0ef8
   Result: 822c879f145943320cc80a9a8372378e3d699fe4
   RxBlocking: 595d9ab56dde6b00beaa5aba40e95b150d2135f1
   RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
@@ -49,6 +56,6 @@ SPEC CHECKSUMS:
   RxTests: 1b13bea0a138552b52aeead549ef08d578bcda9e
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: c095da04e08758e38589b45669f3b8c39cb2497b
+PODFILE CHECKSUM: 0dffef491febbafa8af6018af801e1e1d4629b77
 
 COCOAPODS: 1.0.0
