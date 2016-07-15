@@ -11,6 +11,8 @@
 		A0B1D69907AF7C493C9F0D6A /* Pods_ReactiveMarvelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D522CF1DA106BB6534C9EF97 /* Pods_ReactiveMarvelTests.framework */; };
 		FB089E871D218DBA00D7FB5C /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB089E851D218DBA00D7FB5C /* CharacterDetailViewController.swift */; };
 		FB089E881D218DBA00D7FB5C /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB089E861D218DBA00D7FB5C /* CharacterDetailViewController.xib */; };
+		FB0EC6C11D3945450006C570 /* CharacterDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0EC6BF1D3945450006C570 /* CharacterDetailTableViewCell.swift */; };
+		FB0EC6C21D3945450006C570 /* CharacterDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB0EC6C01D3945450006C570 /* CharacterDetailTableViewCell.xib */; };
 		FB372AC21D37ED8100FE1043 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB372AC11D37ED8100FE1043 /* CharacterDetailViewModel.swift */; };
 		FB3ABB4B1CFE8E19002DB2D2 /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB3ABB471CFE8E19002DB2D2 /* RobotoSlab-Bold.ttf */; };
 		FB3ABB4C1CFE8E19002DB2D2 /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB3ABB481CFE8E19002DB2D2 /* RobotoSlab-Light.ttf */; };
@@ -77,6 +79,8 @@
 		D522CF1DA106BB6534C9EF97 /* Pods_ReactiveMarvelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveMarvelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB089E851D218DBA00D7FB5C /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		FB089E861D218DBA00D7FB5C /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
+		FB0EC6BF1D3945450006C570 /* CharacterDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewCell.swift; sourceTree = "<group>"; };
+		FB0EC6C01D3945450006C570 /* CharacterDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailTableViewCell.xib; sourceTree = "<group>"; };
 		FB372AC11D37ED8100FE1043 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		FB3ABB471CFE8E19002DB2D2 /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
 		FB3ABB481CFE8E19002DB2D2 /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 			children = (
 				FB3ACFBF1CF8BFE700A32A4C /* CharacterTableViewCell.swift */,
 				FB3ACFC01CF8BFE700A32A4C /* CharacterTableViewCell.xib */,
+				FB0EC6BF1D3945450006C570 /* CharacterDetailTableViewCell.swift */,
+				FB0EC6C01D3945450006C570 /* CharacterDetailTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 			files = (
 				FB7787E51CFCE88300A96658 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				FB3ABB4E1CFE8E19002DB2D2 /* RobotoSlab-Thin.ttf in Resources */,
+				FB0EC6C21D3945450006C570 /* CharacterDetailTableViewCell.xib in Resources */,
 				FB7787E21CFCE88300A96658 /* Roboto-Thin.ttf in Resources */,
 				FB089E881D218DBA00D7FB5C /* CharacterDetailViewController.xib in Resources */,
 				FB7787E81CFCE88300A96658 /* RobotoCondensed-LightItalic.ttf in Resources */,
@@ -548,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB0EC6C11D3945450006C570 /* CharacterDetailTableViewCell.swift in Sources */,
 				FBEFE5401CFCC45E0010C271 /* ColorsFontsImages.swift in Sources */,
 				FB8825DB1CF7D70200903711 /* CharacterViewController.swift in Sources */,
 				FB3ACFBD1CF8B1DB00A32A4C /* CharactersQueryViewModel.swift in Sources */,

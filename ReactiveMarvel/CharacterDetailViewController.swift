@@ -12,28 +12,28 @@ import RxCocoa
 
 class CharacterDetailViewController: UIViewController {
     
-    var characterId: BehaviorSubject<String>!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var characterModel: CharacterModel!
+    
+    var characterId: BehaviorSubject<String> {
+        return BehaviorSubject<String>(value: characterModel!.id)
+    }
+    
     let disposeBag = DisposeBag()
     var characterDetailViewModel: CharactersDetailViewModel!
+    let cellIdentifier = String(CharacterDetailTableViewCell)
     
-    var characterModel: CharacterModel? {
-        didSet {
-            characterId = BehaviorSubject<String>(value: characterModel!.id)
-            characterDetailViewModel = CharactersDetailViewModel(characterId: characterId)
-            characterDetailViewModel.trackComics()
-                .subscribeNext { comic in
-                    print(comic)
-            }.addDisposableTo(disposeBag)
-        }
-    }
-
     convenience init() {
         self.init(nibName: "CharacterDetailViewController", bundle: nil)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let characterDetailCellNib = UINib(nibName: cellIdentifier, bundle: nil)
+        tableView.registerNib(characterDetailCellNib, forCellReuseIdentifier: cellIdentifier)
+        tableView.estimatedRowHeight = 50
+        startRx()
         // Do any additional setup after loading the view.
     }
 
@@ -42,7 +42,15 @@ class CharacterDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func startRx() {
+        characterDetailViewModel = CharactersDetailViewModel(characterId: characterId)
+        
+        characterDetailViewModel
+            .trackComics()
+            .bindTo(tableView.rx_itemsWithCellIdentifier(cellIdentifier, cellType: CharacterDetailTableViewCell.self)) { (_, item, cell) in
+                cell.configure(with: item)
+            }.addDisposableTo(disposeBag)
+    }
     /*
     // MARK: - Navigation
 
