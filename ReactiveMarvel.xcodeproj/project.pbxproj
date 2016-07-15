@@ -11,6 +11,7 @@
 		A0B1D69907AF7C493C9F0D6A /* Pods_ReactiveMarvelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D522CF1DA106BB6534C9EF97 /* Pods_ReactiveMarvelTests.framework */; };
 		FB089E871D218DBA00D7FB5C /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB089E851D218DBA00D7FB5C /* CharacterDetailViewController.swift */; };
 		FB089E881D218DBA00D7FB5C /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB089E861D218DBA00D7FB5C /* CharacterDetailViewController.xib */; };
+		FB372AC21D37ED8100FE1043 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB372AC11D37ED8100FE1043 /* CharacterDetailViewModel.swift */; };
 		FB3ABB4B1CFE8E19002DB2D2 /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB3ABB471CFE8E19002DB2D2 /* RobotoSlab-Bold.ttf */; };
 		FB3ABB4C1CFE8E19002DB2D2 /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB3ABB481CFE8E19002DB2D2 /* RobotoSlab-Light.ttf */; };
 		FB3ABB4D1CFE8E19002DB2D2 /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB3ABB491CFE8E19002DB2D2 /* RobotoSlab-Regular.ttf */; };
@@ -76,6 +77,7 @@
 		D522CF1DA106BB6534C9EF97 /* Pods_ReactiveMarvelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveMarvelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB089E851D218DBA00D7FB5C /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		FB089E861D218DBA00D7FB5C /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
+		FB372AC11D37ED8100FE1043 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		FB3ABB471CFE8E19002DB2D2 /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
 		FB3ABB481CFE8E19002DB2D2 /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
 		FB3ABB491CFE8E19002DB2D2 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				FB3ACFBC1CF8B1DB00A32A4C /* CharactersQueryViewModel.swift */,
+				FB372AC11D37ED8100FE1043 /* CharacterDetailViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				FB8825D41CF7CE4800903711 /* JSONable.swift in Sources */,
 				FBEFE53B1CFBBF310010C271 /* RMNavigationController.swift in Sources */,
 				FB089E871D218DBA00D7FB5C /* CharacterDetailViewController.swift in Sources */,
+				FB372AC21D37ED8100FE1043 /* CharacterDetailViewModel.swift in Sources */,
 				FBD5DC621D06284100217932 /* TextInputCoordinator.swift in Sources */,
 				FB3ACFC11CF8BFE700A32A4C /* CharacterTableViewCell.swift in Sources */,
 			);

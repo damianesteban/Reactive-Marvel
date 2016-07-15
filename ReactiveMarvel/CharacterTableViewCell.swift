@@ -26,10 +26,10 @@ class CharacterTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with superModel: CharacterModel) {
-        characterImageRequestWithNuke(superModel.imageURLString)
-        characterNameLabel.text = "Name: \(superModel.name)"
-        characterDescriptionLabel.text = superModel.description.isEmpty ? "Description: No description." : "Description: \(superModel.description)"
+    func configure(with characterModel: CharacterModel) {
+        characterImageRequestWithNuke(characterModel.imageURLString)
+        characterNameLabel.text = "Name: \(characterModel.name)"
+        characterDescriptionLabel.text = characterModel.description.isEmpty ? "Description: No description." : "Description: \(characterModel.description)"
     }
     
     func characterImageRequestWithNuke(urlString: String) {

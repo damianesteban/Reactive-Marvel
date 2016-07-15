@@ -12,15 +12,17 @@ import RxCocoa
 
 class CharacterDetailViewController: UIViewController {
     
-    var comicsCollectionURI: BehaviorSubject<String>?
-    
+    var characterId: BehaviorSubject<String>!
     let disposeBag = DisposeBag()
+    var characterDetailViewModel: CharactersDetailViewModel!
     
     var characterModel: CharacterModel? {
         didSet {
-            comicsCollectionURI = BehaviorSubject<String>(value: characterModel!.comicsCollectionURIString)
-            comicsCollectionURI!.subscribeNext { uri in
-                    print(uri)
+            characterId = BehaviorSubject<String>(value: characterModel!.id)
+            characterDetailViewModel = CharactersDetailViewModel(characterId: characterId)
+            characterDetailViewModel.trackComics()
+                .subscribeNext { comic in
+                    print(comic)
             }.addDisposableTo(disposeBag)
         }
     }
