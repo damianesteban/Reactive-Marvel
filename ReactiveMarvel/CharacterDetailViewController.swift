@@ -15,13 +15,13 @@ class CharacterDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var characterModel: CharacterModel!
+    var characterDetailViewModel: CharactersDetailViewModel!
     
     var characterId: BehaviorSubject<String> {
         return BehaviorSubject<String>(value: characterModel!.id)
     }
     
     let disposeBag = DisposeBag()
-    var characterDetailViewModel: CharactersDetailViewModel!
     let cellIdentifier = String(CharacterDetailTableViewCell)
     
     convenience init() {
@@ -34,7 +34,6 @@ class CharacterDetailViewController: UIViewController {
         tableView.registerNib(characterDetailCellNib, forCellReuseIdentifier: cellIdentifier)
         tableView.estimatedRowHeight = 50
         startRx()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,14 +50,4 @@ class CharacterDetailViewController: UIViewController {
                 cell.configure(with: item)
             }.addDisposableTo(disposeBag)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
