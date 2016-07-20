@@ -11,24 +11,17 @@ import SwiftyJSON
 
 struct Comic: JSONAbleType {
     let title: String
-    let issueNumber: Float
     let description: String
-    let format: String
     
-    let seriesName: String
     let imageURLString: String
     
     static func fromJSON(json: JSON) -> Comic {
         let title = json["title"].stringValue
-        let issueNumber = json["issueNumber"].floatValue
         let description = json["description"].stringValue
-        let format = json["format"].stringValue
-        let seriesName = json["series"]["name"].stringValue
-        let imagePath = json["thumbnail"]["path"].stringValue
-        let imageExtension = json["thumbnail"]["extension"].stringValue
+        let imagePath = json["images"][0]["path"].stringValue
+        let imageExtension = json["images"][0]["extension"].stringValue
         let imageURLString = "\(imagePath).\(imageExtension)"
-        return Comic(title: title, issueNumber: issueNumber, description: description, format: format,
-                     seriesName: seriesName, imageURLString: imageURLString)
+        return Comic(title: title, description: description, imageURLString: imageURLString)
     }
     
     static func arrayFromJSON(object: AnyObject) -> [Comic] {

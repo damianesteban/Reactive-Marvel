@@ -13,9 +13,11 @@ import RxCocoa
 class CharacterDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var characterModel: CharacterModel!
     var characterDetailViewModel: CharactersDetailViewModel!
+    
     
     var characterId: BehaviorSubject<String> {
         return BehaviorSubject<String>(value: characterModel!.id)
@@ -48,6 +50,14 @@ class CharacterDetailViewController: UIViewController {
             .trackComics()
             .bindTo(tableView.rx_itemsWithCellIdentifier(cellIdentifier, cellType: CharacterDetailTableViewCell.self)) { (_, item, cell) in
                 cell.configure(with: item)
-            }.addDisposableTo(disposeBag)
+        }.addDisposableTo(disposeBag)
+        
+        characterDetailViewModel.activityIndicator
+            .drive(UIApplication.sharedApplication().rx_networkActivityIndicatorVisible)
+            .addDisposableTo(disposeBag)
+        
+        characterDetailViewModel.activityIndicator
+            .drive(activityIndicator.rx_animating)
+            .addDisposableTo(disposeBag)
     }
 }

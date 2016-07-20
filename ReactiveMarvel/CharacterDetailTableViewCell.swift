@@ -9,7 +9,7 @@
 import UIKit
 import Nuke
 
-class CharacterDetailTableViewCell: UITableViewCell {
+class CharacterDetailTableViewCell: UITableViewCell, Nukeable {
 
     @IBOutlet weak var comicTitleLabel: UILabel!
     @IBOutlet weak var seriesDescriptionLabel: UILabel!
@@ -27,24 +27,19 @@ class CharacterDetailTableViewCell: UITableViewCell {
     }
     
     func configure(with comicModel: Comic) {
-        comicImageRequestWithNuke(comicModel.imageURLString)
+        imageRequestWithNuke(comicModel.imageURLString, imageView: comicImageView, size: CGSizeMake(80.0, 86.0))
         comicTitleLabel.text = comicModel.title
-        seriesDescriptionLabel.text = comicModel.description
+        seriesDescriptionLabel.text = comicModel.description.isEmpty ? "No description." : comicModel.description
     }
     
-    func comicImageRequestWithNuke(urlString: String) {
-        var request = ImageRequest(URLRequest: NSURLRequest(URL: NSURL(string: urlString)!))
-        // Set target size (in pixels) and content mode that describe how to resize loaded image
-        request.targetSize = CGSize(width: 80.0, height: 86.0)
-        request.contentMode = .AspectFit
-        
+    func imageRequestWithNuke(urlString: String, imageView: UIImageView, size: CGSize) {
+        let request = ImageRequest(URL: NSURL(string: urlString)!, targetSize: size, contentMode: .AspectFit)
         
         Nuke.taskWith(request) {
             let image = $0.image
-            self.comicImageView.image = image
+            imageView.image = image
         }.resume()
     }
-    
 }
 
 

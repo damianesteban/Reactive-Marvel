@@ -27,6 +27,7 @@ struct CharactersDetailViewModel {
     
     internal func fetchComics(characterId: String) -> Observable<[Comic]> {
         return MarvelAPIProvider.request(.Comics(characterId))
+            .trackActivity(self.activityIndicator)
             .observeOn(MainScheduler.instance)
             .debug()
             .mapJSON()

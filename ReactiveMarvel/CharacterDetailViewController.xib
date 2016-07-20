@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailViewController" customModule="ReactiveMarvel" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="Vcd-r6-lvx" id="tpR-pR-Rv9"/>
                 <outlet property="tableView" destination="efa-iO-LHl" id="Lfp-b8-eU8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,12 +21,18 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-r6-lvx">
+                    <rect key="frame" x="142" y="265" width="37" height="37"/>
+                    <color key="color" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="efa-iO-LHl" secondAttribute="bottom" id="0CU-nk-LmU"/>
                 <constraint firstItem="efa-iO-LHl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3Lq-vU-yZr"/>
                 <constraint firstAttribute="trailing" secondItem="efa-iO-LHl" secondAttribute="trailing" id="8zU-Tg-Iga"/>
+                <constraint firstItem="Vcd-r6-lvx" firstAttribute="centerY" secondItem="efa-iO-LHl" secondAttribute="centerY" id="eB7-y1-NEO"/>
+                <constraint firstItem="Vcd-r6-lvx" firstAttribute="centerX" secondItem="efa-iO-LHl" secondAttribute="centerX" id="oaF-yC-VqW"/>
                 <constraint firstItem="efa-iO-LHl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xuO-aR-S6s"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
