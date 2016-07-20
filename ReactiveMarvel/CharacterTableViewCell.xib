@@ -128,7 +128,7 @@
                 <outlet property="characterImageView" destination="h6e-Om-aVQ" id="ABV-0h-Tet"/>
                 <outlet property="characterNameLabel" destination="TLN-BI-uVn" id="wld-cU-Rz7"/>
             </connections>
-            <point key="canvasLocation" x="491" y="360"/>
+            <point key="canvasLocation" x="379" y="287.5"/>
         </tableViewCell>
     </objects>
 </document>
