@@ -32,7 +32,7 @@ class CharacterDetailViewController: UIViewController {
         super.viewDidLoad()
         let characterDetailCellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.registerNib(characterDetailCellNib, forCellReuseIdentifier: cellIdentifier)
-        tableView.estimatedRowHeight = 140
+        tableView.estimatedRowHeight = 100
         startRx()
     }
 
