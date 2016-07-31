@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 import Moya
 import SwiftyJSON
-import Haneke
 
 class CharacterViewController: UIViewController {
 
@@ -42,6 +41,7 @@ class CharacterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Reactive Marvel"
+        self.navigationController!.navigationBar.topItem!.title = ""
         let characterCellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.registerNib(characterCellNib, forCellReuseIdentifier: cellIdentifier)
         tableView.estimatedRowHeight = 25
@@ -84,6 +84,15 @@ class CharacterViewController: UIViewController {
                     self.view.endEditing(true)
                 }
             }.addDisposableTo(disposeBag)
+        
+        tableView
+            .rx_modelSelected(CharacterModel)
+            .subscribeNext { characterModel in
+                let cdvc = CharacterDetailViewController()
+                cdvc.characterModel = characterModel
+                //AppRouter.presentDetailViewController(from: self, toViewController: cdvc)
+                self.navigationController?.pushViewController(cdvc, animated: true)
+        }.addDisposableTo(disposeBag)
     }
 
     func addTapped() {

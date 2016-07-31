@@ -12,7 +12,7 @@ import SwiftyJSON
 struct CharacterModel: JSONAbleType {
 
     let name: String
-    let id: Int
+    let id: String
     let description: String
     let imageURLString: String
     let comicsCollectionURIString: String
@@ -21,7 +21,7 @@ struct CharacterModel: JSONAbleType {
     
     static func fromJSON(json: JSON) -> CharacterModel {
         let name = json["name"].stringValue
-        let id = json["id"].intValue
+        let id = json["id"].stringValue
         let description = json["description"].stringValue
         let imagePath = json["thumbnail"]["path"].stringValue
         let imageExtension = json["thumbnail"]["extension"].stringValue

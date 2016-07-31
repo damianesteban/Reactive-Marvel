@@ -17,7 +17,6 @@ class SignUpViewController: UIViewController, SignupValidator {
     
     let disposeBag = DisposeBag()
     
-    @IBOutlet weak var appTitleLabel: UILabel!
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var submitSignupButton: UIButton!
@@ -28,6 +27,7 @@ class SignUpViewController: UIViewController, SignupValidator {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Reactive Marvel"
         configureUITextFields()
         
         // MARK: username and password validators
@@ -63,7 +63,9 @@ class SignUpViewController: UIViewController, SignupValidator {
         submitSignupButton.rx_tap
             .subscribeNext {
                 print("User is validated")
-                AppRouter.presentNavigationController(with: self)
+//                AppRouter.presentNavigationController(with: self)
+            let cvc = CharacterViewController()
+            self.navigationController?.pushViewController(cvc, animated: true)
             }
             .addDisposableTo(disposeBag)
     }
@@ -91,8 +93,6 @@ extension SignUpViewController {
         
         emailAddressTextField.layer.borderWidth = 1
         passwordTextField.layer.borderWidth = 1
-        
-        appTitleLabel.font = UIFont.Font.RobotoSlab.Regular.font(22)
         
         InputCoordinator.configureEmail(emailAddressTextField)
         InputCoordinator.configurePassword(passwordTextField)

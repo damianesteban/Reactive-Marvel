@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="ReactiveMarvel" customModuleProvider="target">
             <connections>
-                <outlet property="appTitleLabel" destination="tV0-Lf-Sap" id="sNA-jr-xVd"/>
                 <outlet property="emailAddressTextField" destination="ipz-AC-9Xh" id="c4l-DH-dP0"/>
                 <outlet property="passwordTextField" destination="6dp-ID-3YR" id="qM1-gb-c2X"/>
                 <outlet property="submitSignupButton" destination="rDx-IM-ykx" id="tCY-ut-Pyx"/>
@@ -48,16 +47,10 @@
                     </state>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="D0s-2l-H0Z">
-                    <rect key="frame" x="75" y="83" width="169" height="101"/>
+                    <rect key="frame" x="75" y="83" width="169" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reactive Marvel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tV0-Lf-Sap">
-                            <rect key="frame" x="24" y="0.0" width="122" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="x1F-sM-08w">
-                            <rect key="frame" x="0.0" y="41" width="169" height="60"/>
+                            <rect key="frame" x="0.0" y="0.0" width="169" height="60"/>
                             <subviews>
                                 <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RxSwiftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="YGR-41-XHD">
                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -82,14 +75,14 @@
             <constraints>
                 <constraint firstItem="D0s-2l-H0Z" firstAttribute="centerX" secondItem="UkU-YI-Zh0" secondAttribute="centerX" id="3Xd-6k-Qsy"/>
                 <constraint firstItem="rDx-IM-ykx" firstAttribute="centerX" secondItem="UkU-YI-Zh0" secondAttribute="centerX" id="4OR-3i-gHx"/>
-                <constraint firstItem="UkU-YI-Zh0" firstAttribute="top" secondItem="D0s-2l-H0Z" secondAttribute="bottom" constant="8" symbolic="YES" id="ABM-U3-knV"/>
+                <constraint firstItem="UkU-YI-Zh0" firstAttribute="top" secondItem="D0s-2l-H0Z" secondAttribute="bottom" constant="49" id="ABM-U3-knV"/>
                 <constraint firstItem="rDx-IM-ykx" firstAttribute="top" secondItem="UkU-YI-Zh0" secondAttribute="bottom" constant="47" id="JrS-IQ-tjn"/>
                 <constraint firstItem="UkU-YI-Zh0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="192" id="OQy-ff-7l7"/>
                 <constraint firstAttribute="trailing" secondItem="UkU-YI-Zh0" secondAttribute="trailing" constant="2" id="PmP-Do-3eE"/>
                 <constraint firstItem="UkU-YI-Zh0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="2" id="gAn-0z-gv7"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="381" y="434"/>
+            <point key="canvasLocation" x="365" y="359"/>
         </view>
     </objects>
     <resources>

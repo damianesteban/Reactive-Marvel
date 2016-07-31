@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Kingfisher
+import Nuke
 
-class CharacterTableViewCell: UITableViewCell {
+class CharacterTableViewCell: UITableViewCell, Nukeable {
     
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
@@ -22,16 +22,22 @@ class CharacterTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
-    func configure(with superModel: CharacterModel) {
-        characterImageView.kf_setImageWithURL(NSURL(string: superModel.imageURLString)!,
-                                     placeholderImage: nil,
-                                     optionsInfo: [.Transition(ImageTransition.Fade(1))])
-        characterNameLabel.text = "Name: \(superModel.name)"
-        characterDescriptionLabel.text = superModel.description.isEmpty ? "Description: No description." : "Description: \(superModel.description)"
+    func configure(with characterModel: CharacterModel) {
+        imageRequestWithNuke(characterModel.imageURLString, imageView: characterImageView, size: CGSizeMake(84.0, 79.0))
+        characterNameLabel.text = "Name: \(characterModel.name)"
+        characterDescriptionLabel.text = characterModel.description.isEmpty ? "Description: No description." : "Description: \(characterModel.description)"
+    }
+    
+    func imageRequestWithNuke(urlString: String, imageView: UIImageView, size: CGSize) {
+        let request = ImageRequest(URL: NSURL(string: urlString)!, targetSize: size, contentMode: .AspectFit)
+        
+        Nuke.taskWith(request) {
+            let image = $0.image
+            imageView.image = image
+        }.resume()
     }
     
 }

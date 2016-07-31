@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // Override point for customization after application launch.
         let signupViewController = SignUpViewController()
-
-        self.window!.rootViewController = signupViewController
+        let navController = UINavigationController(rootViewController: signupViewController)
+        self.window!.rootViewController = navController
         self.window!.backgroundColor = UIColor.whiteColor()
         configureNavbarAppearance()
         
@@ -51,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - UINavigationController appearance configuration
     func configureNavbarAppearance() {
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.clearColor()], forState: UIControlState.Normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.clearColor()], forState: UIControlState.Highlighted)
         UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UINavigationController.self]).barStyle = .Default
         UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UINavigationController.self]).barTintColor = ColorPalette.BluePrimary
         UINavigationBar.appearanceWhenContainedInInstancesOfClasses([UINavigationController.self]).tintColor = ColorPalette.RedAccent

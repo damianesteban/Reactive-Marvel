@@ -1,18 +1,21 @@
 PODS:
-  - Alamofire (3.4.0)
+  - Alamofire (3.4.1)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - CryptoSwift (0.4.1)
-  - HanekeSwift (0.10.1)
-  - Kingfisher (2.4.1)
+  - CryptoSwift (0.5.1)
+  - FLAnimatedImage (1.0.12)
   - Moya/Core (6.5.0):
     - Alamofire (~> 3.0)
     - Result (~> 2.0)
   - Moya/RxSwift (6.5.0):
     - Moya/Core
     - RxSwift (~> 2.0)
-  - Result (2.0.0)
+  - Nuke (3.1.1)
+  - Nuke-AnimatedImage-Plugin (1.0.0):
+    - FLAnimatedImage (~> 1.0)
+    - Nuke (~> 3.0)
+  - Result (2.1.1)
   - RxBlocking (2.5.0):
     - RxSwift (~> 2.5)
   - RxCocoa (2.5.0):
@@ -28,9 +31,9 @@ PODS:
 DEPENDENCIES:
   - ChameleonFramework/Swift
   - CryptoSwift
-  - HanekeSwift
-  - Kingfisher (~> 2.4)
   - Moya/RxSwift
+  - Nuke
+  - Nuke-AnimatedImage-Plugin
   - RxBlocking (~> 2.0)
   - RxCocoa
   - RxOptional
@@ -38,13 +41,14 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  CryptoSwift: 25b5aff3f260967391f8fff2e9abe4254d2c6fd5
-  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
-  Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
+  CryptoSwift: df42dda18baf6c76347a94e227dbcc0a341304bd
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Moya: f7a4044719381cc6299f9ad3e0ef05f426f0557b
-  Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  Nuke: 75fb602d879372a68679293fdfbd758a1769880d
+  Nuke-AnimatedImage-Plugin: 5a35f5a38dcd6c9559225de1c80ac7e758bd0ef8
+  Result: 822c879f145943320cc80a9a8372378e3d699fe4
   RxBlocking: 595d9ab56dde6b00beaa5aba40e95b150d2135f1
   RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
   RxOptional: b77fb47a0190213cf8a37c7a2b7fda28160b4563
@@ -52,6 +56,6 @@ SPEC CHECKSUMS:
   RxTests: 1b13bea0a138552b52aeead549ef08d578bcda9e
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 92e8d88e5d3a33910b906b3cae09beb6689bba7a
+PODFILE CHECKSUM: 0dffef491febbafa8af6018af801e1e1d4629b77
 
 COCOAPODS: 1.0.0
