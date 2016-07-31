@@ -57,7 +57,6 @@
 		FBEFE5371CFB73AB0010C271 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */; };
 		FBEFE5391CFB7C5B0010C271 /* SignupValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE5381CFB7C5B0010C271 /* SignupValidator.swift */; };
 		FBEFE53B1CFBBF310010C271 /* RMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE53A1CFBBF310010C271 /* RMNavigationController.swift */; };
-		FBEFE53D1CFBBFC60010C271 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE53C1CFBBFC60010C271 /* AppRouter.swift */; };
 		FBEFE5401CFCC45E0010C271 /* ColorsFontsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFE53F1CFCC45E0010C271 /* ColorsFontsImages.swift */; };
 /* End PBXBuildFile section */
 
@@ -130,7 +129,6 @@
 		FBEFE5351CFB73AB0010C271 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		FBEFE5381CFB7C5B0010C271 /* SignupValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupValidator.swift; sourceTree = "<group>"; };
 		FBEFE53A1CFBBF310010C271 /* RMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMNavigationController.swift; sourceTree = "<group>"; };
-		FBEFE53C1CFBBFC60010C271 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		FBEFE53F1CFCC45E0010C271 /* ColorsFontsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsFontsImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -303,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				FB8825D61CF7D01800903711 /* MarvelService.swift */,
-				FBEFE53C1CFBBFC60010C271 /* AppRouter.swift */,
 				FBD5DC5F1D0625E300217932 /* APIKeys.swift */,
 				FBD5DC611D06284100217932 /* TextInputCoordinator.swift */,
 			);
@@ -571,7 +568,6 @@
 				FBB6A6621CFF5A8100664E2E /* Comic.swift in Sources */,
 				FBEFE5391CFB7C5B0010C271 /* SignupValidator.swift in Sources */,
 				FBEFE5361CFB73AB0010C271 /* SignUpViewController.swift in Sources */,
-				FBEFE53D1CFBBFC60010C271 /* AppRouter.swift in Sources */,
 				FB8825D41CF7CE4800903711 /* JSONable.swift in Sources */,
 				FBEFE53B1CFBBF310010C271 /* RMNavigationController.swift in Sources */,
 				FB089E871D218DBA00D7FB5C /* CharacterDetailViewController.swift in Sources */,
