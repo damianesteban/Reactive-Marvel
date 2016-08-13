@@ -19,10 +19,10 @@ class CharacterViewController: UIViewController {
     @IBOutlet weak var networkActivityIndicatorView: UIActivityIndicatorView!
     
     let disposeBag = DisposeBag()
-    var superQueryViewModel: CharactersQueryViewModel!
     let cellIdentifier = String(CharacterTableViewCell)
-    
     let activityIndicator = ActivityIndicator()
+    
+    var superQueryViewModel: CharactersQueryViewModel!
     
     // We use latestQuery to initialize CharactersQueryViewModel.  When the user begins typing in
     // the UISearchBar this kicks off our network request.
@@ -37,7 +37,7 @@ class CharacterViewController: UIViewController {
     convenience init() {
         self.init(nibName: "CharacterViewController", bundle: nil)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Reactive Marvel"

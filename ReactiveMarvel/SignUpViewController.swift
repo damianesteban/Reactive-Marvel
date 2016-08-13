@@ -63,9 +63,8 @@ class SignUpViewController: UIViewController, SignupValidator {
         submitSignupButton.rx_tap
             .subscribeNext {
                 print("User is validated")
-//                AppRouter.presentNavigationController(with: self)
-            let cvc = CharacterViewController()
-            self.navigationController?.pushViewController(cvc, animated: true)
+                let cvc = CharacterViewController()
+                self.navigationController?.pushViewController(cvc, animated: true)
             }
             .addDisposableTo(disposeBag)
     }
